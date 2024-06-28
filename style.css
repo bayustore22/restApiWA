@@ -1,0 +1,409 @@
+/*
+Theme Name: Shannz APIs Theme
+Theme URI: http://example.com/my-theme
+Author: Shannz
+Author URI: http://example.com
+Description: Tema untuk Shannz APIs
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: custom-theme, responsive
+Text Domain: shannz-apis-theme
+*/
+
+body {
+    background-color: #000; 
+    }
+
+header {
+    background-color: #000; /* Warna latar belakang hitam */
+    color: #fff; /* Warna teks putih */
+    padding: 10px;
+    width: 100%; /* Lebar penuh */
+    position: fixed;
+    top: 0;
+    right: 0; /* Posisi header di sebelah kanan */
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between; /* Mengatur posisi item ke ujung kiri dan kanan */
+}
+
+/* CSS untuk judul "Shannz APIs" */
+.logo {
+    padding: 10px; /* Padding untuk menjaga jarak dari elemen sekitarnya */
+    color: #fff; /* Warna putih */
+    margin-top: 7px;
+    margin-left: 15px; /* Geser judul ke kanan */
+}
+
+/* CSS untuk tombol hamburger menu */
+.menu-toggle {
+    display: block;
+    cursor: pointer;
+    padding: 10px;
+    color: #fff; /* Warna putih */
+}
+
+.line {
+    width: 30px;
+    height: 3px;
+    background-color: #fff; /* Warna putih */
+    margin: 5px 0;
+    transition: all 0.3s;
+}
+
+.menu-toggle.active .line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.active .line:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active .line:nth-child(3) {
+    transform: rotate(-65deg) translate(10px, -10px);
+}
+
+/* CSS untuk efek slide menu */
+nav {
+    position: fixed;
+    top: 0; /* Geser menu ke atas header */
+    left: -250px; /* Menu awalnya tersembunyi di luar layar sebelah kiri */
+    width: 250px;
+    height: 100vh;
+    background-color: #000; /* Warna latar belakang hitam */
+    color: #fff; /* Warna teks putih */
+    transition: left 0.3s; /* Efek transisi saat menu digeser */
+    z-index: 1000; /* Menempatkan menu di atas header */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    padding: 10px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s; /* Efek transisi warna selama 0.3 detik */
+}
+
+nav a:hover {
+    color: yellow;
+}
+
+nav.slide {
+    left: 0;
+}
+
+.clock-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin-top: 80px; /* Jarak antara header dan jam */
+}
+
+.digital-clock {
+    font-size: 30px;
+    font-weight: bold;
+    display: inline-block;
+    animation: colorChange 5s infinite; /* Animasi perubahan warna selama 5 detik */
+    padding: 20px;
+    border: 3px solid #fff; /* Bingkai putih */
+    border-radius: 15px; /* Sudut bingkai melengkung */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Bayangan untuk efek 3D */
+    background: linear-gradient(45deg, #333, #555); /* Latar belakang gradasi */
+    color: #fff; /* Warna teks putih */
+    text-shadow: 1px 1px 0 #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff; /* Efek stroke putih */
+}
+
+.hour, .minute, .second {
+    margin: 0 5px;
+}
+
+.separator {
+    color: #fff; /* Warna putih untuk separator */
+    margin: 0 5px;
+}
+
+@keyframes colorChange {
+    0% { color: red; }
+    25% { color: blue; }
+    50% { color: green; }
+    75% { color: orange; }
+    100% { color: purple; }
+}
+
+/* CSS untuk kotak besar dan kotak kecil */
+.box-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px; /* Jarak antara jam dan kotak besar */
+}
+
+.big-box {
+  display: flex;
+  flex-direction: column; /* Mengatur kotak kecil secara vertikal */
+  justify-content: space-around;
+  align-items: center;
+  width: 80%;
+  padding: 20px;
+  border: 3px solid #fff; /* Bingkai putih */
+  border-radius: 15px; /* Sudut bingkai melengkung */
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); /* Bayangan putih */
+  background: linear-gradient(45deg, #333, #555); /* Latar belakang gradasi */
+}
+
+.small-box {
+    width: 105%; /* Lebar kotak kecil */
+    padding: 10px; /* Mengurangi padding untuk memperkecil tinggi kotak */
+    margin: 10px 0; /* Jarak antar kotak kecil */
+    border: 2px solid #fff; /* Bingkai putih */
+    border-radius: 10px; /* Sudut bingkai melengkung */
+    text-align: center;
+    color: #fff; /* Warna teks putih */
+    background: linear-gradient(45deg, #444, #666); /* Latar belakang gradasi */
+    transition: height 0.3s, padding 0.3s; /* Efek transisi hanya pada tinggi dan padding */
+    cursor: pointer; /* Menunjukkan bahwa kotak dapat diklik */
+    position: relative; /* Untuk menempatkan teks tambahan di dalam kotak */
+    box-sizing: border-box; /* Memastikan padding dan border termasuk dalam ukuran kotak */
+    height: 50px; /* Tinggi kotak kecil */
+    overflow-y: auto; /* Menambahkan scroll vertikal jika konten terlalu panjang */
+}
+
+.small-box.expanded {
+    height: 300px; /* Tinggi kotak saat membesar */
+    padding: 20px; /* Padding saat kotak membesar */
+    background: linear-gradient(45deg, #444, #666); /* Tetap menggunakan latar belakang yang sama */
+}
+
+.small-box:hover {
+    transform: scale(1.05);
+    background: linear-gradient(45deg, #444, #666); /* Tetap menggunakan latar belakang yang sama */
+}
+
+.small-box.expanded .additional-text {
+    display: flex; /* Tampilkan teks tambahan saat kotak membesar */
+    justify-content: space-between; /* Mengatur posisi link dan tombol copy */
+    align-items: center;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 20px; /* Jarak antara judul dan kotak besar */
+}
+
+/* CSS untuk memastikan footer berada di bawah */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+main {
+    flex: 1;
+}
+
+footer {
+            background: #1e1e1e;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            margin-top: 40px;
+            box-shadow: 0 -4px 8px rgba(0,0,0,0.1);
+        }
+        footer p {
+            margin: 0;
+            font-size: 0.7em;
+        }
+
+.colum-container {
+    display: flex;
+    align-items: center;
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+    border-radius: 5px;
+    width: fit-content;
+}
+
+.link-box {
+    background-color: #1e1e1e;
+    border: none;
+    color: #ffffff;
+    padding: 5px 10px; /* Mengurangi padding untuk menyesuaikan tinggi */
+    border-radius: 5px 0 0 5px;
+    width: auto; /* Mengatur lebar otomatis */
+    height: 25px; /* Mengatur tinggi kolom link menjadi 25px */
+    overflow-y: auto; /* Menambahkan scrollbar vertikal */
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: flex;
+    font-size: 0.9em;
+    align-items: center; /* Menyelaraskan teks secara vertikal */
+}
+
+.additional-text {
+    display: none; /* Sembunyikan elemen secara default */
+}
+
+.small-box.expanded .additional-text {
+    display: flex; /* Tampilkan elemen saat kotak diperbesar */
+    justify-content: space-between; /* Mengatur posisi link dan tombol copy */
+    align-items: center;
+    margin-top: 10px; /* Jarak antara teks asli dan elemen tambahan */
+}
+
+.copy-button {
+    background-color: #1e90ff;
+    border: none;
+    color: #ffffff;
+    padding: 5px 10px; /* Mengurangi padding untuk menyesuaikan tinggi */
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    height: 30px; /* Mengatur tinggi tombol salin menjadi 25px */
+    display: flex;
+    align-items: center; /* Menyelaraskan teks secara vertikal */
+}
+
+.copy-button:hover {
+    background-color: #555;
+}
+
+.popup {
+    visibility: hidden;
+    background-color: #333;
+    color: #ffffff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 10px;
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.popup.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+.code-block {
+    background: #1e1e1e;
+    padding: 10px;
+    border-left: 5px solid #1e90ff;
+    margin: 0px 0;
+    position: relative;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: none
+}
+
+.code-block pre {
+    margin: 0;
+    overflow-x: auto;
+    font-size: 0.9em;
+    text-align: left;
+}
+
+.small-box.expanded .code-block {
+    display: block; /* Tampilkan code-block saat kotak diperbesar */
+}
+
+.text-code {
+    font-size: 12px;
+    color: #fff;
+    padding: 5px;
+    background-color: #1e1e1e;
+    border-left: 5px solid #fff;
+    border-radius: 5px;
+    display: none; /* Sembunyikan elemen secara default */
+}
+
+.small-box.expanded .text-code {
+    display: block; /* Tampilkan elemen saat kotak diperbesar */
+    margin-top: 10px; /* Jarak antara teks code dan kotak code-block */
+}
+
+.blue-button {
+    background-color: #1e90ff; /* biru tua */
+    color: #fff;
+    border: none;
+    padding: 5px 5px;
+    font-size: 13px;
+    cursor: pointer;
+    border-radius: 55px;
+    transition: background-color 0.3s ease;
+  }
+
+ .blue-button:hover {
+    background-color: #1a3d5f; /* biru tua sedikit lebih gelap */
+  }
+  
+  .stats-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+            margin-left: 10px;
+            margin-right: 10px;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        .stats-box {
+            border: 3px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            gap: 15px;
+            width: 45%;
+            text-align: center;
+            background: linear-gradient(45deg, #333, #555);
+        }
+        
+        .stats-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+        }
+        
+        .stats-box h5 {
+            margin-bottom: 10px;
+            color: #fff;
+        }
+        .stats-box p {
+            font-size: 1.5em;
+            margin: 0;
+            color: #fff;
+        }
+        
+        .judul {
+  text-align: center; /* align text to center */
+  color: #fff;
+}
+
+h1 {
+  font-weight: bold; /* make text bold */
+  font-style: italic; /* add italic style */
+  font-size: 24px; /* increase font size for better readability */
+  color: #fff; /* default text color */
+}
+
+h1 span.shannz {
+  color: #FF0000; /* make "shannz" red */
+}
+
+h1 span.apis {
+  color: #0000FF; /* make "apis" blue */
+}

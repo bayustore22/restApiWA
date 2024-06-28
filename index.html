@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:image" content="https://telegra.ph/file/ccd375197ca065ca7d99f.jpg" />
+    <meta property="og:description" content="Ambil semua hanya dengan result json." />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Shannz APIs</div>
+        <div class="menu-toggle">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </header>
+
+    <main>
+        <div class="clock-container">
+            <div class="digital-clock">
+                <span class="hour">00</span>
+                <span class="separator">:</span>
+                <span class="minute">00</span>
+                <span class="separator">:</span>
+                <span class="second">00</span>
+            </div>
+        </div>
+        
+      <div class="box-container">
+      <div class="big-box">
+        <div class="judul">
+  <h1><span class="shannz">Shannz</span> Rest <span class="apis">APIs</span></h1>
+  <p>Shannz rest api adalah website penyedia endpoint api dari berbagai jenis kategori yang pastinya gratis.</p>
+  <p>Saya juga menyediakan simple code case agar memudahkan kalian dalam mengimplementasikan api ini kedalam bot whatsapp kalian.</p>
+  <p>Jadi tunggu apalagi? segera pakai dan gunakan, ambil semuanya hanya dengan result json</p>
+</div>
+</div>
+</div>
+        
+        <div class="box-container">
+            <div class="big-box">
+                <div class="title">/ai</div>
+                <div class="small-box" onclick="expandBox(this)">
+  <div>/simsimi?</div>
+  <div class="additional-text">
+    <div class="colum-container">
+      <div class="link-box" id="linkBoxSimi">https://shannmoderz-95f1d384b6d2.herokuapp.com/ai/simsimi?query=</div>
+      <button class="copy-button" onclick="copyToClipboard(document.getElementById('linkBoxSimi'))">Copy</button>
+    </div>
+  </div>
+  <div class="text-code">parameter required</div> <!-- Add this line -->
+  <div class="code-block">
+    <pre><code>/simsimi?query=</code></pre>
+  </div>
+   <div class="text-code">simple case code</div> <!-- Add this line -->
+  <div class="code-block">
+    <pre><code>case 'simi': {
+  if (!text) return m.reply('masukkan pertanyaanmu!')
+  try {
+    let simsimi = await (await fetch(`https://shannmoderz-95f1d384b6d2.herokuapp.com/ai/simsimi?query=${text}`)).json()
+    let shannz = simsimi.result
+    m.reply(shannz)
+  } catch (err) {
+      m.reply('masukkan query lainnya atau coba lagi nanti')
+    }
+}
+break</code></pre>
+  </div>
+  <div class="additional-text">
+ <a href="https://shannmoderz-95f1d384b6d2.herokuapp.com/ai/simsimi?query=halo" target="_blank">
+  <button class="blue-button">
+    Check Result
+  </button>
+</a>
+</div>
+</div>
+
+<div class="small-box" onclick="expandBox(this)">
+  <div>/goody?</div>
+  <div class="additional-text">
+    <div class="colum-container">
+      <div class="link-box" id="linkBoxGoody">https://shannmoderz-95f1d384b6d2.herokuapp.com/ai/goody?query=</div>
+      <button class="copy-button" onclick="copyToClipboard(document.getElementById('linkBoxGoody'))">Copy</button>
+    </div>
+  </div>
+  <div class="text-code">parameter required</div> <!-- Add this line -->
+  <div class="code-block">
+    <pre><code>/goody?query=</code></pre>
+  </div>
+   <div class="text-code">simple case code</div> <!-- Add this line -->
+  <div class="code-block">
+    <pre><code>case 'goody': {
+  if (!text) return m.reply('masukkan pertanyaanmu!')
+  try {
+    let goody = await (await fetch(`https://shannmoderz-95f1d384b6d2.herokuapp.com/ai/goody?query=${text}`)).json()
+    let shannz = goody.result
+    m.reply(shannz)
+  } catch (err) {
+      m.reply('masukkan query lainnya atau coba lagi nanti')
+    }
+}
+break</code></pre>
+  </div>
+  <div class="additional-text">
+ <a href="https://shannmoderz-95f1d384b6d2.herokuapp.com/ai/goody?query=halo" target="_blank">
+  <button class="blue-button">
+    Check Result
+  </button>
+</a>
+</div>
+</div>
+
+<div class="small-box" onclick="expandBox(this)">
+  <div>/aoyo?</div>
+  <div class="additional-text">
+    <div class="colum-container">
+      <div class="link-box" id="linkBoxAoyo">https://shannmoderz-95f1d384b6d2.herokuapp.com/ai/aoyo?query=</div>
+      <button class="copy-button" onclick="copyToClipboard(document.getElementById('linkBoxAoyo'))">Copy</button>
+    </div>
+  </div>
+  <div class="text-code">parameter required</div> <!-- Add this line -->
+  <div class="code-block">
+    <pre><code>/aoyo?query=</code></pre>
+  </div>
+   <div class="text-code">simple case code</div> <!-- Add this line -->
+  <div class="code-block">
+    <pre><code>case 'aoyo': {
+  if (!text) return m.reply('masukkan pertanyaanmu!')
+  try {
+    let aoyo = await (await fetch(`https://shannmoderz-95f1d384b6d2.herokuapp.com/ai/aoyo?query=${text}`)).json()
+    let shannz = aoyo.result
+    m.reply(shannz)
+  } catch (err) {
+      m.reply('masukkan query lainnya atau coba lagi nanti')
+    }
+}
+break</code></pre>
+  </div>
+  <div class="additional-text">
+ <a href="https://shannmoderz-95f1d384b6d2.herokuapp.com/ai/aoyo?query=halo" target="_blank">
+  <button class="blue-button">
+    Check Result
+  </button>
+</a>
+</div>
+</div>
+
+<div class="small-box" onclick="expandBox(this)">
+  <div>/letmegpt?</div>
+  <div class="additional-text">
+    <div class="colum-container">
+      <div class="link-box" id="linkBoxLetme">https://shannmoderz-95f1d384b6d2.herokuapp.com/ai/letmegpt?query=</div>
+      <button class="copy-button" onclick="copyToClipboard(document.getElementById('linkBoxLetme'))">Copy</button>
+    </div>
+  </div>
+  <div class="text-code">parameter required</div> <!-- Add this line -->
+  <div class="code-block">
+    <pre><code>/letmegpt?query=</code></pre>
+  </div>
+   <div class="text-code">simple case code</div> <!-- Add this line -->
+  <div class="code-block">
+    <pre><code>case 'letmegpt': {
+  if (!text) return m.reply('masukkan pertanyaanmu!')
+  try {
+    let letmegpt = await (await fetch(`https://shannmoderz-95f1d384b6d2.herokuapp.com/ai/letmegpt?query=${text}`)).json()
+    let shannz = letmegpt.result
+    m.reply(shannz)
+  } catch (err) {
+      m.reply('masukkan query lainnya atau coba lagi nanti')
+    }
+}
+break</code></pre>
+  </div>
+  <div class="additional-text">
+ <a href="https://shannmoderz-95f1d384b6d2.herokuapp.com/ai/letmegpt?query=halo" target="_blank">
+  <button class="blue-button">
+    Check Result
+  </button>
+</a>
+</div>
+</div>
+
+<div class="small-box" onclick="expandBox(this)">
+  <div>/cgt?</div>
+  <div class="additional-text">
+    <div class="colum-container">
+      <div class="link-box" id="linkBoxCgt">https://shannmoderz-95f1d384b6d2.herokuapp.com/ai/cgt?query=</div>
+      <button class="copy-button" onclick="copyToClipboard(document.getElementById('linkBoxCgt'))">Copy</button>
+    </div>
+  </div>
+  <div class="text-code">parameter required</div> <!-- Add this line -->
+  <div class="code-block">
+    <pre><code>/cgt?query=</code></pre>
+  </div>
+   <div class="text-code">simple case code</div> <!-- Add this line -->
+  <div class="code-block">
+    <pre><code>case 'cgt': {
+  if (!text) return m.reply('masukkan pertanyaanmu!')
+  try {
+    let cgt = await (await fetch(`https://shannmoderz-95f1d384b6d2.herokuapp.com/ai/cgt?query=${text}`)).json()
+    let proces = cgt.result.data
+    let shannz = proces.message
+    m.reply(shannz)
+  } catch (err) {
+      m.reply('masukkan query lainnya atau coba lagi nanti')
+    }
+}
+break</code></pre>
+  </div>
+  <div class="additional-text">
+ <a href="https://shannmoderz-95f1d384b6d2.herokuapp.com/ai/cgt?query=halo" target="_blank">
+  <button class="blue-button">
+    Check Result
+  </button>
+</a>
+</div>
+</div>
+
+<div class="small-box" onclick="expandBox(this)">
+  <div>/yousearch?</div>
+  <div class="additional-text">
+    <div class="colum-container">
+      <div class="link-box" id="linkBoxYous">https://shannmoderz-95f1d384b6d2.herokuapp.com/ai/yousearch?query=</div>
+      <button class="copy-button" onclick="copyToClipboard(document.getElementById('linkBoxYous'))">Copy</button>
+    </div>
+  </div>
+  <div class="text-code">parameter required</div> <!-- Add this line -->
+  <div class="code-block">
+    <pre><code>/yousearch?query=</code></pre>
+  </div>
+   <div class="text-code">simple case code</div> <!-- Add this line -->
+  <div class="code-block">
+    <pre><code>case 'yousearch': {
+  if (!text) return m.reply('masukkan pertanyaanmu!')
+  try {
+    let yousearch = await (await fetch(`https://shannmoderz-95f1d384b6d2.herokuapp.com/ai/yousearch?query=${text}`)).json()
+    let shannz = yousearch.result
+    m.reply(shannz)
+  } catch (err) {
+      m.reply('masukkan query lainnya atau coba lagi nanti')
+    }
+}
+break</code></pre>
+  </div>
+  <div class="additional-text">
+ <a href="https://shannmoderz-95f1d384b6d2.herokuapp.com/ai/yousearch?query=halo" target="_blank">
+  <button class="blue-button">
+    Check Result
+  </button>
+</a>
+</div>
+</div>
+
+<div class="small-box" onclick="expandBox(this)">
+  <div>/blackbox?</div>
+  <div class="additional-text">
+    <div class="colum-container">
+      <div class="link-box" id="linkBoxBbox">https://shannmoderz-95f1d384b6d2.herokuapp.com/ai/blackbox?query=</div>
+      <button class="copy-button" onclick="copyToClipboard(document.getElementById('linkBoxBbox'))">Copy</button>
+    </div>
+  </div>
+  <div class="text-code">parameter required</div> <!-- Add this line -->
+  <div class="code-block">
+    <pre><code>/blackbox?query=</code></pre>
+  </div>
+   <div class="text-code">simple case code</div> <!-- Add this line -->
+  <div class="code-block">
+    <pre><code>case 'blackbox': {
+  if (!text) return m.reply('masukkan pertanyaanmu!')
+  try {
+    let blackbox = await (await fetch(`https://shannmoderz-95f1d384b6d2.herokuapp.com/ai/blackbox?query=${text}`)).json()
+    let shannz = blackbox.result
+    m.reply(shannz)
+  } catch (err) {
+      m.reply('masukkan query lainnya atau coba lagi nanti')
+    }
+}
+break</code></pre>
+  </div>
+  <div class="additional-text">
+ <a href="https://shannmoderz-95f1d384b6d2.herokuapp.com/ai/blackbox?query=tanggal+berapa+sekarang?" target="_blank">
+  <button class="blue-button">
+    Check Result
+  </button>
+</a>
+</div>
+</div>
+
+<div class="small-box" onclick="expandBox(this)">
+  <div>/claude?</div>
+  <div class="additional-text">
+    <div class="colum-container">
+      <div class="link-box" id="linkBoxClaude">https://shannmoderz-95f1d384b6d2.herokuapp.com/ai/claude?query=</div>
+      <button class="copy-button" onclick="copyToClipboard(document.getElementById('linkBoxClaude'))">Copy</button>
+    </div>
+  </div>
+  <div class="text-code">parameter required</div> <!-- Add this line -->
+  <div class="code-block">
+    <pre><code>/claude?query=</code></pre>
+  </div>
+   <div class="text-code">simple case code</div> <!-- Add this line -->
+  <div class="code-block">
+    <pre><code>case 'claude': {
+  if (!text) return m.reply('masukkan pertanyaanmu!')
+  try {
+    let claude = await (await fetch(`https://shannmoderz-95f1d384b6d2.herokuapp.com/ai/claude?query=${text}`)).json()
+    let shannz = claude.result
+    m.reply(shannz)
+  } catch (err) {
+      m.reply('masukkan query lainnya atau coba lagi nanti')
+    }
+}
+break</code></pre>
+  </div>
+  <div class="additional-text">
+ <a href="https://shannmoderz-95f1d384b6d2.herokuapp.com/ai/claude?query=halo" target="_blank">
+  <button class="blue-button">
+    Check Result
+  </button>
+</a>
+</div>
+</div>
+
+<div class="small-box" onclick="expandBox(this)">
+  <div>/luminai?</div>
+  <div class="additional-text">
+    <div class="colum-container">
+      <div class="link-box" id="linkBoxLumin">https://shannmoderz-95f1d384b6d2.herokuapp.com/ai/luminai?query=</div>
+      <button class="copy-button" onclick="copyToClipboard(document.getElementById('linkBoxLumin'))">Copy</button>
+    </div>
+  </div>
+  <div class="text-code">parameter required</div> <!-- Add this line -->
+  <div class="code-block">
+    <pre><code>/luminai?query=</code></pre>
+  </div>
+   <div class="text-code">simple case code</div> <!-- Add this line -->
+  <div class="code-block">
+    <pre><code>case 'luminai': {
+  if (!text) return m.reply('masukkan pertanyaanmu!')
+  try {
+    let luminai = await (await fetch(`https://shannmoderz-95f1d384b6d2.herokuapp.com/ai/luminai?query=${text}`)).json()
+    let shannz = luminai.result
+    m.reply(shannz)
+  } catch (err) {
+      m.reply('masukkan query lainnya atau coba lagi nanti')
+    }
+}
+break</code></pre>
+  </div>
+  <div class="additional-text">
+ <a href="https://shannmoderz-95f1d384b6d2.herokuapp.com/ai/luminai?query=halo" target="_blank">
+  <button class="blue-button">
+    Check Result
+  </button>
+</a>
+</div>
+</div>
+
+<div class="small-box" onclick="expandBox(this)">
+  <div>/lepton?</div>
+  <div class="additional-text">
+    <div class="colum-container">
+      <div class="link-box" id="linkBoxLepton">https://shannmoderz-95f1d384b6d2.herokuapp.com/ai/lepton?query=</div>
+      <button class="copy-button" onclick="copyToClipboard(document.getElementById('linkBoxLepton'))">Copy</button>
+    </div>
+  </div>
+  <div class="text-code">parameter required</div> <!-- Add this line -->
+  <div class="code-block">
+    <pre><code>/lepton?query=</code></pre>
+  </div>
+   <div class="text-code">simple case code</div> <!-- Add this line -->
+  <div class="code-block">
+    <pre><code>case 'lepton': {
+  if (!text) return m.reply('masukkan pertanyaanmu!')
+  try {
+    let lepton = await (await fetch(`https://shannmoderz-95f1d384b6d2.herokuapp.com/ai/lepton?query=${text}`)).json()
+    let shannz = lepton.result
+    m.reply(shannz)
+  } catch (err) {
+      m.reply('masukkan query lainnya atau coba lagi nanti')
+    }
+}
+break</code></pre>
+  </div>
+  <div class="additional-text">
+ <a href="https://shannmoderz-95f1d384b6d2.herokuapp.com/ai/lepton?query=halo" target="_blank">
+  <button class="blue-button">
+    Check Result
+  </button>
+</a>
+</div>
+</div>
+
+<div class="small-box" onclick="expandBox(this)">
+  <div>/prod?</div>
+  <div class="additional-text">
+    <div class="colum-container">
+      <div class="link-box" id="linkBoxProd">https://shannmoderz-95f1d384b6d2.herokuapp.com/ai/prod?query=</div>
+      <button class="copy-button" onclick="copyToClipboard(document.getElementById('linkBoxProd'))">Copy</button>
+    </div>
+  </div>
+  <div class="text-code">parameter required</div> <!-- Add this line -->
+  <div class="code-block">
+    <pre><code>/prod?query=</code></pre>
+  </div>
+   <div class="text-code">simple case code</div> <!-- Add this line -->
+  <div class="code-block">
+    <pre><code>case 'prod': {
+  if (!text) return m.reply('masukkan pertanyaanmu!')
+  try {
+    let prod = await (await fetch(`https://shannmoderz-95f1d384b6d2.herokuapp.com/ai/prod?query=${text}`)).json()
+    let shannz = prod.result
+    m.reply(shannz)
+  } catch (err) {
+      m.reply('masukkan query lainnya atau coba lagi nanti')
+    }
+}
+break</code></pre>
+  </div>
+  <div class="additional-text">
+ <a href="https://shannmoderz-95f1d384b6d2.herokuapp.com/ai/prod?query=halo" target="_blank">
+  <button class="blue-button">
+    Check Result
+  </button>
+</a>
+</div>
+</div>
+
+<div class="small-box" onclick="expandBox(this)">
+  <div>/tudou?</div>
+  <div class="additional-text">
+    <div class="colum-container">
+      <div class="link-box" id="linkBoxTudou">https://shannmoderz-95f1d384b6d2.herokuapp.com/ai/tudou?query=</div>
+      <button class="copy-button" onclick="copyToClipboard(document.getElementById('linkBoxTudou'))">Copy</button>
+    </div>
+  </div>
+  <div class="text-code">parameter required</div> <!-- Add this line -->
+  <div class="code-block">
+    <pre><code>/tudou?query=&prompt=</code></pre>
+  </div>
+   <div class="text-code">simple case code</div> <!-- Add this line -->
+  <div class="code-block">
+    <pre><code>case 'kobo': {
+  if (!text) return m.reply('masukkan pertanyaanmu!')
+  try {
+    let prompt = `sekarang kamu adalah kobo, kamu memerankan drama disetiap percakapan mu dengan ${pushname}, kamu laki-laki yang kuat dan riang gembira`
+    let tudou = await (await fetch(`https://shannmoderz-95f1d384b6d2.herokuapp.com/ai/tudou?query=${text}&prompt=${prompt}`)).json()
+    let shannz = tudou.result
+    m.reply(shannz)
+  } catch (err) {
+      m.reply('masukkan query lainnya atau coba lagi nanti')
+    }
+}
+break</code></pre>
+  </div>
+  <div class="additional-text">
+ <a href="https://shannmoderz-95f1d384b6d2.herokuapp.com/ai/tudou?query=halo&prompt=sekarang+kamu+adalah+luffy" target="_blank">
+  <button class="blue-button">
+    Check Result
+  </button>
+</a>
+</div>
+</div>
+            </div>
+        </div>
+
+        <div class="box-container">
+            <div class="big-box">
+                <div class="title">/search</div>
+                <div class="small-box" onclick="expandBox(this)">
+                    <div>/playstore?</div>
+                    <div class="additional-text">
+                        <div class="colum-container">
+                            <div class="link-box" id="linkBoxPlaystore">https://shannmoderz-95f1d384b6d2.herokuapp.com/search/playstore?query=</div>
+                            <button class="copy-button" onclick="copyToClipboard(document.getElementById('linkBoxPlaystore'))">Copy</button>
+                        </div>
+                    </div>
+                    <div class="text-code">parameter required</div>
+                    <div class="code-block">
+                        <pre><code>/playstore?query=</code></pre>
+                    </div>
+                    <div class="text-code">simple case code</div>
+                    <div class="code-block">
+                        <pre><code>case 'playstore': {
+  if (!text) return m.reply('masukkan nama aplikasi/game!')
+  try {
+    let play = await (await fetch(`https://shannmoderz-95f1d384b6d2.herokuapp.com/search/playstore?query=${text}`)).json()
+    let shannz = play.result[0]
+    Shannz.sendMessage( m.chat, { image: { url: shannz.img }, caption: `Name: ${shannz.nama}\nDevelopers: ${shannz.developer}\nRate: ${shannz.rate2}\nInfoRate: ${shannz.rate}\nLinkDev: ${shannz.link_dev}\nLink: ${shannz.link}` },{ quoted: m })
+  } catch (err) {
+      m.reply('masukkan query lainnya atau coba lagi nanti')
+    }
+}
+break</code></pre>
+                    </div>
+                    <div class="additional-text">
+                        <a href="https://shannmoderz-95f1d384b6d2.herokuapp.com/search/playstore?query=termux" target="_blank">
+                            <button class="blue-button">
+                                Check Result
+                            </button>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="small-box" onclick="expandBox(this)">
+                    <div>/android1?</div>
+                    <div class="additional-text">
+                        <div class="colum-container">
+                            <div class="link-box" id="linkBoxan1">https://shannmoderz-95f1d384b6d2.herokuapp.com/search/android1?query=</div>
+                            <button class="copy-button" onclick="copyToClipboard(document.getElementById('linkBoxan1'))">Copy</button>
+                        </div>
+                    </div>
+                    <div class="text-code">parameter required</div>
+                    <div class="code-block">
+                        <pre><code>/android1?query=</code></pre>
+                    </div>
+                    <div class="text-code">simple case code</div>
+                    <div class="code-block">
+                        <pre><code>case 'android1': {
+  if (!text) return m.reply('masukkan nama aplikasi/game!')
+  try {
+    let an1 = await (await fetch(`https://shannmoderz-95f1d384b6d2.herokuapp.com/search/android1?query=${text}`)).json()
+    let shannz = an1.result.data[0]
+    Shannz.sendMessage( m.chat, { image: { url: shannz.thumb }, caption: `Nama: ${shannz.judul}\nDevelopers: ${shannz.dev}\nRate: ${shannz.rating}\nLink: ${shannz.link}` },{ quoted: m })
+  } catch (err) {
+      m.reply('masukkan query lainnya atau coba lagi nanti')
+    }
+}
+break</code></pre>
+                    </div>
+                    <div class="additional-text">
+                        <a href="https://shannmoderz-95f1d384b6d2.herokuapp.com/search/android1?query=pvz" target="_blank">
+                            <button class="blue-button">
+                                Check Result
+                            </button>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="small-box" onclick="expandBox(this)">
+                    <div>/happymod?</div>
+                    <div class="additional-text">
+                        <div class="colum-container">
+                            <div class="link-box" id="linkBoxHpy">https://shannmoderz-95f1d384b6d2.herokuapp.com/search/happymod?query=</div>
+                            <button class="copy-button" onclick="copyToClipboard(document.getElementById('linkBoxHpy'))">Copy</button>
+                        </div>
+                    </div>
+                    <div class="text-code">parameter required</div>
+                    <div class="code-block">
+                        <pre><code>/happymod?query=</code></pre>
+                    </div>
+                    <div class="text-code">simple case code</div>
+                    <div class="code-block">
+                        <pre><code>case 'happymod': {
+  if (!text) return m.reply('masukkan nama aplikasi/game!')
+  try {
+    let mod = await (await fetch(`https://shannmoderz-95f1d384b6d2.herokuapp.com/search/happymod?query=${text}`)).json()
+    let shannz = mod.result.data[0]
+    m.reply(`Nama: ${shannz.name}\nVersi: ${shannz.version}\nLink: ${shannz.url}`)
+  } catch (err) {
+      m.reply('masukkan query lainnya atau coba lagi nanti')
+    }
+}
+break</code></pre>
+                    </div>
+                    <div class="additional-text">
+                        <a href="https://shannmoderz-95f1d384b6d2.herokuapp.com/search/happymod?query=halo" target="_blank">
+                            <button class="blue-button">
+                                Check Result
+                            </button>
+                        </a>
+                    </div>
+                </div>
+                <div class="small-box" onclick="expandBox(this)">
+                    <div>/webtoons?</div>
+                    <div class="additional-text">
+                        <div class="colum-container">
+                            <div class="link-box" id="linkBoxWebt">https://shannmoderz-95f1d384b6d2.herokuapp.com/search/webtoons?query=</div>
+                            <button class="copy-button" onclick="copyToClipboard(document.getElementById('linkBoxWebt'))">Copy</button>
+                        </div>
+                    </div>
+                    <div class="text-code">parameter required</div>
+                    <div class="code-block">
+                        <pre><code>/webtoons?query=</code></pre>
+                    </div>
+                    <div class="text-code">simple case code</div>
+                    <div class="code-block">
+                        <pre><code>case 'webtoons': {
+  if (!text) return m.reply('masukkan judul komik!')
+  try {
+    let web = await (await fetch(`https://shannmoderz-95f1d384b6d2.herokuapp.com/search/webtoons?query=${text}`)).json()
+    let shannz = web.result[0]
+    m.reply(`Judul: ${shannz.judul}\nGenre: ${shannz.genre}\nAuthor: ${shannz.author}\nLike: ${shannz.likes}\nLink: ${shannz.link}`)
+  } catch (err) {
+      m.reply('masukkan query lainnya atau coba lagi nanti')
+    }
+}
+break</code></pre>
+                    </div>
+                    <div class="additional-text">
+                        <a href="https://shannmoderz-95f1d384b6d2.herokuapp.com/search/webtoons?query=girlfriend" target="_blank">
+                            <button class="blue-button">
+                                Check Result
+                            </button>
+                        </a>
+                    </div>
+                </div>
+                <div class="small-box" onclick="expandBox(this)">
+                    <div>/mangatoon?</div>
+                    <div class="additional-text">
+                        <div class="colum-container">
+                            <div class="link-box" id="linkBoxMangt">https://shannmoderz-95f1d384b6d2.herokuapp.com/search/mangatoon?query=</div>
+                            <button class="copy-button" onclick="copyToClipboard(document.getElementById('linkBoxMangt'))">Copy</button>
+                        </div>
+                    </div>
+                    <div class="text-code">parameter required</div>
+                    <div class="code-block">
+                        <pre><code>/mangatoon?query=</code></pre>
+                    </div>
+                    <div class="text-code">simple case code</div>
+                    <div class="code-block">
+                        <pre><code>case 'mangatoon': {
+  if (!text) return m.reply('masukkan judul manga!')
+  try {
+    let manga = await (await fetch(`https://shannmoderz-95f1d384b6d2.herokuapp.com/search/mangatoon?query=${text}`)).json()
+    let shannz = manga.result[0]
+    m.reply(`Judul: ${shannz.comic_name}\nGenre: ${shannz.comic_type}\nLink: ${shannz.comic_url}`)
+  } catch (err) {
+      m.reply('masukkan query lainnya atau coba lagi nanti')
+    }
+}
+break</code></pre>
+                    </div>
+                    <div class="additional-text">
+                        <a href="https://shannmoderz-95f1d384b6d2.herokuapp.com/search/mangatoon?query=hero" target="_blank">
+                            <button class="blue-button">
+                                Check Result
+                            </button>
+                        </a>
+                    </div>
+                </div>
+                <div class="small-box" onclick="expandBox(this)">
+                    <div>/wattpad?</div>
+                    <div class="additional-text">
+                        <div class="colum-container">
+                            <div class="link-box" id="linkBoxWat">https://shannmoderz-95f1d384b6d2.herokuapp.com/search/wattpad?query=</div>
+                            <button class="copy-button" onclick="copyToClipboard(document.getElementById('linkBoxWat'))">Copy</button>
+                        </div>
+                    </div>
+                    <div class="text-code">parameter required</div>
+                    <div class="code-block">
+                        <pre><code>/wattpad?query=</code></pre>
+                    </div>
+                    <div class="text-code">simple case code</div>
+                    <div class="code-block">
+                        <pre><code>case 'wattpad': {
+  if (!text) return m.reply('masukkan judul novel!')
+  try {
+    let wattpad = await (await fetch(`https://shannmoderz-95f1d384b6d2.herokuapp.com/search/wattpad?query=${text}`)).json()
+    let shannz = wattpad.result[0]
+    Shannz.sendMessage( m.chat, { image: { url: shannz.thumb }, caption: `Judul: ${shannz.judul}\nViews: ${shannz.dibaca}\nVote: ${shannz.divote}\nLink: ${shannz.link}` },{ quoted: m })
+  } catch (err) {
+      m.reply('masukkan query lainnya atau coba lagi nanti')
+    }
+}
+break</code></pre>
+                    </div>
+                    <div class="additional-text">
+                        <a href="https://shannmoderz-95f1d384b6d2.herokuapp.com/search/wattpad?query=horror" target="_blank">
+                            <button class="blue-button">
+                                Check Result
+                            </button>
+                        </a>
+                    </div>
+                </div>
+                <div class="small-box" onclick="expandBox(this)">
+                    <div>/bukalapak?</div>
+                    <div class="additional-text">
+                        <div class="colum-container">
+                            <div class="link-box" id="linkBoxBL">https://shannmoderz-95f1d384b6d2.herokuapp.com/search/bukalapak?query=</div>
+                            <button class="copy-button" onclick="copyToClipboard(document.getElementById('linkBoxBL'))">Copy</button>
+                        </div>
+                    </div>
+                    <div class="text-code">parameter required</div>
+                    <div class="code-block">
+                        <pre><code>/bukalapak?query=</code></pre>
+                    </div>
+                    <div class="text-code">simple case code</div>
+                    <div class="code-block">
+                        <pre><code>case 'bukalapak': {
+  if (!text) return m.reply('masukkan nama produk!')
+  try {
+    let lapak = await (await fetch(`https://shannmoderz-95f1d384b6d2.herokuapp.com/search/bukalapak?query=${text}`)).json()
+    let shannz = lapak.result[0]
+    Shannz.sendMessage( m.chat, { image: { url: shannz.image }, caption: `Topik: ${shannz.title}\nToko: ${shannz.store.nama}\nRate: ${shannz.rating}\nHarga: ${shannz.harga}\nTerjual: ${shannz.terjual}\nLokasi: ${shannz.store.lokasi}\nLinkStore: ${shannz.store.link}\nLinkProduk: ${shannz.link}` },{ quoted: m })
+  } catch (err) {
+      m.reply('masukkan query lainnya atau coba lagi nanti')
+    }
+}
+break</code></pre>
+                    </div>
+                    <div class="additional-text">
+                        <a href="https://shannmoderz-95f1d384b6d2.herokuapp.com/search/bukalapak?query=kaos+polos" target="_blank">
+                            <button class="blue-button">
+                                Check Result
+                            </button>
+                        </a>
+                    </div>
+                </div>
+                <div class="small-box" onclick="expandBox(this)">
+                    <div>/cariresep?</div>
+                    <div class="additional-text">
+                        <div class="colum-container">
+                            <div class="link-box" id="linkBoxCresep">https://shannmoderz-95f1d384b6d2.herokuapp.com/search/cariresep?query=</div>
+                            <button class="copy-button" onclick="copyToClipboard(document.getElementById('linkBoxCresep'))">Copy</button>
+                        </div>
+                    </div>
+                    <div class="text-code">parameter required</div>
+                    <div class="code-block">
+                        <pre><code>/cariresep?query=</code></pre>
+                    </div>
+                    <div class="text-code">simple case code</div>
+                    <div class="code-block">
+                        <pre><code>case 'resep': {
+  if (!text) return m.reply('masukkan nama makanan!')
+  try {
+    let resep = await (await fetch(`https://shannmoderz-95f1d384b6d2.herokuapp.com/search/cariresep?query=${text}`)).json()
+    let shannz = resep.result.data[0]
+    m.reply(`Judul: ${shannz.judul}\nLink: ${shannz.link}`)
+  } catch (err) {
+      m.reply('masukkan query lainnya atau coba lagi nanti')
+    }
+}
+break</code></pre>
+                    </div>
+                    <div class="additional-text">
+                        <a href="https://shannmoderz-95f1d384b6d2.herokuapp.com/search/cariresep?query=soto+babat" target="_blank">
+                            <button class="blue-button">
+                                Check Result
+                            </button>
+                        </a>
+                    </div>
+                </div>
+                <div class="small-box" onclick="expandBox(this)">
+                    <div>/stickersearch?</div>
+                    <div class="additional-text">
+                        <div class="colum-container">
+                            <div class="link-box" id="linkBoxStickers">https://shannmoderz-95f1d384b6d2.herokuapp.com/search/stickersearch?query=</div>
+                            <button class="copy-button" onclick="copyToClipboard(document.getElementById('linkBoxStickers'))">Copy</button>
+                        </div>
+                    </div>
+                    <div class="text-code">parameter required</div>
+                    <div class="code-block">
+                        <pre><code>/stickersearch?query=</code></pre>
+                    </div>
+                    <div class="text-code">simple case code</div>
+                    <div class="code-block">
+                        <pre><code>case 'stickersearch': {
+  if (!text) return m.reply('masukkan genre sticker!')
+  try {
+    let sticker = await (await fetch(`https://shannmoderz-95f1d384b6d2.herokuapp.com/search/stickersearch?query=${text}`)).json()
+    let shannz = sticker.result
+    m.reply(`Title: ${shannz.title}\nAuthor: ${shannz.author}\nLinkAuthor: ${shannz.author_link}\nExample: Sticker Sending...\nAllSticker: [ ${shannz.sticker} ]`)
+    Shannz.sendImageAsSticker(m.chat, shannz.sticker[0], m, { packname: 'shannz', author: 'rest-api' })
+  } catch (err) {
+      m.reply('masukkan query lainnya atau coba lagi nanti')
+    }
+}
+break</code></pre>
+                    </div>
+                    <div class="additional-text">
+                        <a href="https://shannmoderz-95f1d384b6d2.herokuapp.com/search/stickersearch?query=anime" target="_blank">
+                            <button class="blue-button">
+                                Check Result
+                            </button>
+                        </a>
+                    </div>
+                </div>
+                <div class="small-box" onclick="expandBox(this)">
+                    <div>/seegore?</div>
+                    <div class="additional-text">
+                        <div class="colum-container">
+                            <div class="link-box" id="linkBoxGore">https://shannmoderz-95f1d384b6d2.herokuapp.com/search/seegore?query=</div>
+                            <button class="copy-button" onclick="copyToClipboard(document.getElementById('linkBoxGore'))">Copy</button>
+                        </div>
+                    </div>
+                    <div class="text-code">parameter required</div>
+                    <div class="code-block">
+                        <pre><code>/seegore?query=</code></pre>
+                    </div>
+                    <div class="text-code">simple case code</div>
+                    <div class="code-block">
+                        <pre><code>case 'seegore': {
+  if (!text) return m.reply('masukkan keyword!')
+  try {
+    let gore = await (await fetch(`https://shannmoderz-95f1d384b6d2.herokuapp.com/search/seegore?query=${text}`)).json()
+    let shannz = gore.result.data[0]
+    m.reply(`Title: ${shannz.judul}\nUploader: ${shannz.uploader}\nLink: ${shannz.link}`)
+  } catch (err) {
+      m.reply('masukkan query lainnya atau coba lagi nanti')
+    }
+}
+break</code></pre>
+                    </div>
+                    <div class="additional-text">
+                        <a href="https://shannmoderz-95f1d384b6d2.herokuapp.com/search/seegore?query=burn" target="_blank">
+                            <button class="blue-button">
+                                Check Result
+                            </button>
+                        </a>
+                    </div>
+                </div>
+                <div class="small-box" onclick="expandBox(this)">
+                    <div>/filmapik21?</div>
+                    <div class="additional-text">
+                        <div class="colum-container">
+                            <div class="link-box" id="linkBoxApik">https://shannmoderz-95f1d384b6d2.herokuapp.com/search/filmapik21?query=</div>
+                            <button class="copy-button" onclick="copyToClipboard(document.getElementById('linkBoxApik'))">Copy</button>
+                        </div>
+                    </div>
+                    <div class="text-code">parameter required</div>
+                    <div class="code-block">
+                        <pre><code>/filmapik21?query=</code></pre>
+                    </div>
+                    <div class="text-code">simple case code</div>
+                    <div class="code-block">
+                        <pre><code>case 'filmapik21': {
+  if (!text) return m.reply('masukkan judul film!')
+  try {
+    let apik = await (await fetch(`https://shannmoderz-95f1d384b6d2.herokuapp.com/search/filmapik21?query=${text}`)).json()
+    let shannz = apik.result[0]
+    Shannz.sendMessage( m.chat, { image: { url: shannz.thumb }, caption: `Judul: ${shannz.title}\nRate: ${shannz.rating}\nLink: ${shannz.url}\nSinopsis: ${shannz.sinopsis}` },{ quoted: m })
+  } catch (err) {
+      m.reply('masukkan query lainnya atau coba lagi nanti')
+    }
+}
+break</code></pre>
+                    </div>
+                    <div class="additional-text">
+                        <a href="https://shannmoderz-95f1d384b6d2.herokuapp.com/search/filmapik21?query=batman" target="_blank">
+                            <button class="blue-button">
+                                Check Result
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="popup" id="popup">copied ✅</div>
+    </main>
+
+    <nav>
+        <div class="logo">Shannz APIs</div>
+        <ul>
+            <li><a href="#">Documentasi</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <div class="stats-container">
+        <div class="stats-box">
+            <h5>Total Visitor</h5>
+            <p id="visitor">0</p>
+        </div>
+        <div class="stats-box">
+            <h5>Total Request</h5>
+            <p id="total-requests">0</p>
+        </div>
+    </div>
+
+    <footer>
+            <p>&copy; 2024 Shannz-APIs. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
