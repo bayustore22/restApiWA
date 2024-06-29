@@ -8,6 +8,42 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="loading-overlay" id="loading">
+        <div class="galaxy-loader">
+            <div class="stars"></div>
+            <div class="stars2"></div>
+            <div class="stars3"></div>
+            <!-- Menambahkan gelombang-gelombang berwarna putih -->
+            <div class="wave"></div>
+            <div class="wave wave2"></div>
+        </div>
+        <div class="loading-text">
+            Starting Adventure<span class="dot">.</span><span class="dot">.</span><span class="dot">.</span>
+        </div>
+    </div>
+
+    <!-- Elemen popup -->
+    <div class="popup-overlay" id="popup1">
+        <div class="popup-content">
+            <img src="https://telegra.ph/file/14aa63a29ab6b1053a790.jpg" alt="Popup Image">
+            <h2>PERHATIAN!!</h2>
+            <p>Saat ini Shannz APIs berstatus gratis dan dapat diakses oleh semua orang, namun bisa saja berbayar dikemudian hari tergantung sistem owner.</p>
+            <button class="close-btn" onclick="closePopup1()">Close</button>
+        </div>
+    </div>
+    
+    <div class="popup-overlay" id="popup2">
+        <div class="popup-content">
+            <img src="https://telegra.ph/file/3a9af659b6258be78c3a3.jpg" alt="Popup Image">
+            <h2>NEW FEATURES!!</h2>
+            <ul>
+                <li>Add Endpoint ephoto360</li>
+                <li>Add 30 Model Ephoto</li>
+            </ul>
+            <button class="close-btn" onclick="closePopup2()">Close</button>
+        </div>
+    </div>
+    
     <header>
         <div class="logo">Shannz APIs</div>
         <div class="menu-toggle">
@@ -68,13 +104,11 @@
 }
 break</code></pre>
   </div>
-  <div class="additional-text">
  <a href="https://shannmoderz-95f1d384b6d2.herokuapp.com/ai/simsimi?query=halo" target="_blank">
   <button class="blue-button">
-    Check Result
+    Check Example Schema Result
   </button>
 </a>
-</div>
 </div>
 
 <div class="small-box" onclick="expandBox(this)">
@@ -103,13 +137,11 @@ break</code></pre>
 }
 break</code></pre>
   </div>
-  <div class="additional-text">
  <a href="https://shannmoderz-95f1d384b6d2.herokuapp.com/ai/goody?query=halo" target="_blank">
   <button class="blue-button">
-    Check Result
+    Check Example Schema Result
   </button>
 </a>
-</div>
 </div>
 
 <div class="small-box" onclick="expandBox(this)">
@@ -138,13 +170,11 @@ break</code></pre>
 }
 break</code></pre>
   </div>
-  <div class="additional-text">
  <a href="https://shannmoderz-95f1d384b6d2.herokuapp.com/ai/aoyo?query=halo" target="_blank">
   <button class="blue-button">
-    Check Result
+    Check Example Schema Result
   </button>
 </a>
-</div>
 </div>
 
 <div class="small-box" onclick="expandBox(this)">
@@ -173,13 +203,11 @@ break</code></pre>
 }
 break</code></pre>
   </div>
-  <div class="additional-text">
  <a href="https://shannmoderz-95f1d384b6d2.herokuapp.com/ai/letmegpt?query=halo" target="_blank">
   <button class="blue-button">
-    Check Result
+    Check Example Schema Result
   </button>
 </a>
-</div>
 </div>
 
 <div class="small-box" onclick="expandBox(this)">
@@ -209,13 +237,11 @@ break</code></pre>
 }
 break</code></pre>
   </div>
-  <div class="additional-text">
  <a href="https://shannmoderz-95f1d384b6d2.herokuapp.com/ai/cgt?query=halo" target="_blank">
   <button class="blue-button">
-    Check Result
+    Check Example Schema Result
   </button>
 </a>
-</div>
 </div>
 
 <div class="small-box" onclick="expandBox(this)">
@@ -244,13 +270,11 @@ break</code></pre>
 }
 break</code></pre>
   </div>
-  <div class="additional-text">
  <a href="https://shannmoderz-95f1d384b6d2.herokuapp.com/ai/yousearch?query=halo" target="_blank">
   <button class="blue-button">
-    Check Result
+    Check Example Schema Result
   </button>
 </a>
-</div>
 </div>
 
 <div class="small-box" onclick="expandBox(this)">
@@ -279,13 +303,11 @@ break</code></pre>
 }
 break</code></pre>
   </div>
-  <div class="additional-text">
  <a href="https://shannmoderz-95f1d384b6d2.herokuapp.com/ai/blackbox?query=tanggal+berapa+sekarang?" target="_blank">
   <button class="blue-button">
-    Check Result
+    Check Example Schema Result
   </button>
 </a>
-</div>
 </div>
 
 <div class="small-box" onclick="expandBox(this)">
@@ -314,13 +336,11 @@ break</code></pre>
 }
 break</code></pre>
   </div>
-  <div class="additional-text">
  <a href="https://shannmoderz-95f1d384b6d2.herokuapp.com/ai/claude?query=halo" target="_blank">
   <button class="blue-button">
-    Check Result
+    Check Example Schema Result
   </button>
 </a>
-</div>
 </div>
 
 <div class="small-box" onclick="expandBox(this)">
@@ -349,13 +369,11 @@ break</code></pre>
 }
 break</code></pre>
   </div>
-  <div class="additional-text">
  <a href="https://shannmoderz-95f1d384b6d2.herokuapp.com/ai/luminai?query=halo" target="_blank">
   <button class="blue-button">
-    Check Result
+    Check Example Schema Result
   </button>
 </a>
-</div>
 </div>
 
 <div class="small-box" onclick="expandBox(this)">
@@ -384,13 +402,11 @@ break</code></pre>
 }
 break</code></pre>
   </div>
-  <div class="additional-text">
  <a href="https://shannmoderz-95f1d384b6d2.herokuapp.com/ai/lepton?query=halo" target="_blank">
   <button class="blue-button">
-    Check Result
+    Check Example Schema Result
   </button>
 </a>
-</div>
 </div>
 
 <div class="small-box" onclick="expandBox(this)">
@@ -419,13 +435,11 @@ break</code></pre>
 }
 break</code></pre>
   </div>
-  <div class="additional-text">
  <a href="https://shannmoderz-95f1d384b6d2.herokuapp.com/ai/prod?query=halo" target="_blank">
   <button class="blue-button">
-    Check Result
+    Check Example Schema Result
   </button>
 </a>
-</div>
 </div>
 
 <div class="small-box" onclick="expandBox(this)">
@@ -455,13 +469,11 @@ break</code></pre>
 }
 break</code></pre>
   </div>
-  <div class="additional-text">
  <a href="https://shannmoderz-95f1d384b6d2.herokuapp.com/ai/tudou?query=halo&prompt=sekarang+kamu+adalah+luffy" target="_blank">
   <button class="blue-button">
-    Check Result
+    Check Example Schema Result
   </button>
 </a>
-</div>
 </div>
             </div>
         </div>
@@ -495,14 +507,12 @@ break</code></pre>
 }
 break</code></pre>
                     </div>
-                    <div class="additional-text">
                         <a href="https://shannmoderz-95f1d384b6d2.herokuapp.com/search/playstore?query=termux" target="_blank">
                             <button class="blue-button">
-                                Check Result
+                                Check Example Schema Result
                             </button>
                         </a>
                     </div>
-                </div>
 
                 <div class="small-box" onclick="expandBox(this)">
                     <div>/android1?</div>
@@ -530,13 +540,11 @@ break</code></pre>
 }
 break</code></pre>
                     </div>
-                    <div class="additional-text">
                         <a href="https://shannmoderz-95f1d384b6d2.herokuapp.com/search/android1?query=pvz" target="_blank">
                             <button class="blue-button">
-                                Check Result
+                                Check Example Schema Result
                             </button>
                         </a>
-                    </div>
                 </div>
 
                 <div class="small-box" onclick="expandBox(this)">
@@ -565,13 +573,11 @@ break</code></pre>
 }
 break</code></pre>
                     </div>
-                    <div class="additional-text">
                         <a href="https://shannmoderz-95f1d384b6d2.herokuapp.com/search/happymod?query=halo" target="_blank">
                             <button class="blue-button">
-                                Check Result
+                                Check Example Schema Result
                             </button>
                         </a>
-                    </div>
                 </div>
                 <div class="small-box" onclick="expandBox(this)">
                     <div>/webtoons?</div>
@@ -599,13 +605,11 @@ break</code></pre>
 }
 break</code></pre>
                     </div>
-                    <div class="additional-text">
                         <a href="https://shannmoderz-95f1d384b6d2.herokuapp.com/search/webtoons?query=girlfriend" target="_blank">
                             <button class="blue-button">
-                                Check Result
+                                Check Example Schema Result
                             </button>
                         </a>
-                    </div>
                 </div>
                 <div class="small-box" onclick="expandBox(this)">
                     <div>/mangatoon?</div>
@@ -633,13 +637,11 @@ break</code></pre>
 }
 break</code></pre>
                     </div>
-                    <div class="additional-text">
                         <a href="https://shannmoderz-95f1d384b6d2.herokuapp.com/search/mangatoon?query=hero" target="_blank">
                             <button class="blue-button">
-                                Check Result
+                                Check Example Schema Result
                             </button>
                         </a>
-                    </div>
                 </div>
                 <div class="small-box" onclick="expandBox(this)">
                     <div>/wattpad?</div>
@@ -667,13 +669,11 @@ break</code></pre>
 }
 break</code></pre>
                     </div>
-                    <div class="additional-text">
                         <a href="https://shannmoderz-95f1d384b6d2.herokuapp.com/search/wattpad?query=horror" target="_blank">
                             <button class="blue-button">
-                                Check Result
+                                Check Example Schema Result
                             </button>
                         </a>
-                    </div>
                 </div>
                 <div class="small-box" onclick="expandBox(this)">
                     <div>/bukalapak?</div>
@@ -701,13 +701,11 @@ break</code></pre>
 }
 break</code></pre>
                     </div>
-                    <div class="additional-text">
                         <a href="https://shannmoderz-95f1d384b6d2.herokuapp.com/search/bukalapak?query=kaos+polos" target="_blank">
                             <button class="blue-button">
-                                Check Result
+                                Check Example Schema Result
                             </button>
                         </a>
-                    </div>
                 </div>
                 <div class="small-box" onclick="expandBox(this)">
                     <div>/cariresep?</div>
@@ -735,13 +733,11 @@ break</code></pre>
 }
 break</code></pre>
                     </div>
-                    <div class="additional-text">
                         <a href="https://shannmoderz-95f1d384b6d2.herokuapp.com/search/cariresep?query=soto+babat" target="_blank">
                             <button class="blue-button">
-                                Check Result
+                                Check Example Schema Result
                             </button>
                         </a>
-                    </div>
                 </div>
                 <div class="small-box" onclick="expandBox(this)">
                     <div>/stickersearch?</div>
@@ -770,13 +766,11 @@ break</code></pre>
 }
 break</code></pre>
                     </div>
-                    <div class="additional-text">
                         <a href="https://shannmoderz-95f1d384b6d2.herokuapp.com/search/stickersearch?query=anime" target="_blank">
                             <button class="blue-button">
-                                Check Result
+                                Check Example Schema Result
                             </button>
                         </a>
-                    </div>
                 </div>
                 <div class="small-box" onclick="expandBox(this)">
                     <div>/seegore?</div>
@@ -804,13 +798,11 @@ break</code></pre>
 }
 break</code></pre>
                     </div>
-                    <div class="additional-text">
                         <a href="https://shannmoderz-95f1d384b6d2.herokuapp.com/search/seegore?query=burn" target="_blank">
                             <button class="blue-button">
-                                Check Result
+                                Check Example Schema Result
                             </button>
                         </a>
-                    </div>
                 </div>
                 <div class="small-box" onclick="expandBox(this)">
                     <div>/filmapik21?</div>
@@ -838,13 +830,574 @@ break</code></pre>
 }
 break</code></pre>
                     </div>
-                    <div class="additional-text">
                         <a href="https://shannmoderz-95f1d384b6d2.herokuapp.com/search/filmapik21?query=batman" target="_blank">
                             <button class="blue-button">
-                                Check Result
+                                Check Example Schema Result
                             </button>
                         </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="box-container">
+            <div class="big-box">
+                <div class="title">/ephoto360</div>
+                <div class="small-box" onclick="expandBox(this)">
+                    <div>Simple Case Code</div>
+                    <div class="additional-text">
                     </div>
+                    <div class="text-code">berlaku untuk semua model ephoto</div>
+                    <div class="code-block">
+                        <pre><code>case 'glitchtext': {
+  if (!text) return m.reply('masukkan text nya!')
+  try {
+    Shannz.sendMessage( m.chat, { image: { url: `https://shannmoderz-95f1d384b6d2.herokuapp.com/ephoto360/glitchtext?query=${text}` }, caption: `Powered By Shannz APIs` },{ quoted: m })
+  } catch (err) {
+      m.reply('masukkan query lainnya atau coba lagi nanti')
+    }
+}
+break</code></pre>
+                    </div>
+                </div>
+                <div class="small-box" onclick="expandBox(this)">
+                    <div>/glitchtext?</div>
+                    <div class="additional-text">
+                        <div class="colum-container">
+                            <div class="link-box" id="linkBoxGT">https://shannmoderz-95f1d384b6d2.herokuapp.com/ephoto360/glitchtext?query=</div>
+                            <button class="copy-button" onclick="copyToClipboard(document.getElementById('linkBoxGT'))">Copy</button>
+                        </div>
+                    </div>
+                    <div class="text-code">parameter required</div>
+                    <div class="code-block">
+                        <pre><code>/glitchtext?query=</code></pre>
+                    </div>
+                        <a href="https://shannmoderz-95f1d384b6d2.herokuapp.com/ephoto360/glitchtext?query=Shannz" target="_blank">
+                            <button class="blue-button">
+                                Check Example Schema Result
+                            </button>
+                        </a>
+                </div>
+                <div class="small-box" onclick="expandBox(this)">
+                    <div>/writetext?</div>
+                    <div class="additional-text">
+                        <div class="colum-container">
+                            <div class="link-box" id="linkBoxWT">https://shannmoderz-95f1d384b6d2.herokuapp.com/ephoto360/writetext?query=</div>
+                            <button class="copy-button" onclick="copyToClipboard(document.getElementById('linkBoxWT'))">Copy</button>
+                        </div>
+                    </div>
+                    <div class="text-code">parameter required</div>
+                    <div class="code-block">
+                        <pre><code>/writetext?query=</code></pre>
+                    </div>
+                        <a href="https://shannmoderz-95f1d384b6d2.herokuapp.com/ephoto360/writetext?query=Shannz" target="_blank">
+                            <button class="blue-button">
+                                Check Example Schema Result
+                            </button>
+                        </a>
+                </div>
+                <div class="small-box" onclick="expandBox(this)">
+                    <div>/blackpinklogo?</div>
+                    <div class="additional-text">
+                        <div class="colum-container">
+                            <div class="link-box" id="linkBoxBPL">https://shannmoderz-95f1d384b6d2.herokuapp.com/ephoto360/blackpinklogo?query=</div>
+                            <button class="copy-button" onclick="copyToClipboard(document.getElementById('linkBoxBPL'))">Copy</button>
+                        </div>
+                    </div>
+                    <div class="text-code">parameter required</div>
+                    <div class="code-block">
+                        <pre><code>/blakpinklogo?query=</code></pre>
+                    </div>
+                        <a href="https://shannmoderz-95f1d384b6d2.herokuapp.com/ephoto360/blackpinklogo?query=Shannz" target="_blank">
+                            <button class="blue-button">
+                                Check Example Schema Result
+                            </button>
+                        </a>
+                </div>
+                <div class="small-box" onclick="expandBox(this)">
+                    <div>/advancedglow?</div>
+                    <div class="additional-text">
+                        <div class="colum-container">
+                            <div class="link-box" id="linkBoxAG">https://shannmoderz-95f1d384b6d2.herokuapp.com/ephoto360/advancedglow?query=</div>
+                            <button class="copy-button" onclick="copyToClipboard(document.getElementById('linkBoxAG'))">Copy</button>
+                        </div>
+                    </div>
+                    <div class="text-code">parameter required</div>
+                    <div class="code-block">
+                        <pre><code>/advancedglow?query=</code></pre>
+                    </div>
+                        <a href="https://shannmoderz-95f1d384b6d2.herokuapp.com/ephoto360/advancedglow?query=Shannz" target="_blank">
+                            <button class="blue-button">
+                                Check Example Schema Result
+                            </button>
+                        </a>
+                </div>
+                <div class="small-box" onclick="expandBox(this)">
+                    <div>/typographytext?</div>
+                    <div class="additional-text">
+                        <div class="colum-container">
+                            <div class="link-box" id="linkBoxTT">https://shannmoderz-95f1d384b6d2.herokuapp.com/ephoto360/typographytext?query=</div>
+                            <button class="copy-button" onclick="copyToClipboard(document.getElementById('linkBoxTT'))">Copy</button>
+                        </div>
+                    </div>
+                    <div class="text-code">parameter required</div>
+                    <div class="code-block">
+                        <pre><code>/typographytext?query=</code></pre>
+                    </div>
+                        <a href="https://shannmoderz-95f1d384b6d2.herokuapp.com/ephoto360/typographytext?query=Shannz" target="_blank">
+                            <button class="blue-button">
+                                Check Example Schema Result
+                            </button>
+                        </a>
+                </div>
+                <div class="small-box" onclick="expandBox(this)">
+                    <div>/pixelglitch?</div>
+                    <div class="additional-text">
+                        <div class="colum-container">
+                            <div class="link-box" id="linkBoxPG">https://shannmoderz-95f1d384b6d2.herokuapp.com/ephoto360/pixelgitch?query=</div>
+                            <button class="copy-button" onclick="copyToClipboard(document.getElementById('linkBoxPG'))">Copy</button>
+                        </div>
+                    </div>
+                    <div class="text-code">parameter required</div>
+                    <div class="code-block">
+                        <pre><code>/pixelglitch?query=</code></pre>
+                    </div>
+                        <a href="https://shannmoderz-95f1d384b6d2.herokuapp.com/ephoto360/pixelglitch?query=Shannz" target="_blank">
+                            <button class="blue-button">
+                                Check Example Schema Result
+                            </button>
+                        </a>
+                </div>
+                <div class="small-box" onclick="expandBox(this)">
+                    <div>/neonglitch?</div>
+                    <div class="additional-text">
+                        <div class="colum-container">
+                            <div class="link-box" id="linkBoxNG">https://shannmoderz-95f1d384b6d2.herokuapp.com/ephoto360/neonglitch?query=</div>
+                            <button class="copy-button" onclick="copyToClipboard(document.getElementById('linkBoxNG'))">Copy</button>
+                        </div>
+                    </div>
+                    <div class="text-code">parameter required</div>
+                    <div class="code-block">
+                        <pre><code>/neonglitch?query=</code></pre>
+                    </div>
+                        <a href="https://shannmoderz-95f1d384b6d2.herokuapp.com/ephoto360/neonglitch?query=Shannz" target="_blank">
+                            <button class="blue-button">
+                                Check Example Schema Result
+                            </button>
+                        </a>
+                </div>
+                <div class="small-box" onclick="expandBox(this)">
+                    <div>/flag?</div>
+                    <div class="additional-text">
+                        <div class="colum-container">
+                            <div class="link-box" id="linkBoxF">https://shannmoderz-95f1d384b6d2.herokuapp.com/ephoto360/flag?query=</div>
+                            <button class="copy-button" onclick="copyToClipboard(document.getElementById('linkBoxF'))">Copy</button>
+                        </div>
+                    </div>
+                    <div class="text-code">parameter required</div>
+                    <div class="code-block">
+                        <pre><code>/flag?query=</code></pre>
+                    </div>
+                        <a href="https://shannmoderz-95f1d384b6d2.herokuapp.com/ephoto360/flag?query=Shannz" target="_blank">
+                            <button class="blue-button">
+                                Check Example Schema Result
+                            </button>
+                        </a>
+                </div>
+                <div class="small-box" onclick="expandBox(this)">
+                    <div>/flag2?</div>
+                    <div class="additional-text">
+                        <div class="colum-container">
+                            <div class="link-box" id="linkBoxF2">https://shannmoderz-95f1d384b6d2.herokuapp.com/ephoto360/flag2?query=</div>
+                            <button class="copy-button" onclick="copyToClipboard(document.getElementById('linkBoxF2'))">Copy</button>
+                        </div>
+                    </div>
+                    <div class="text-code">parameter required</div>
+                    <div class="code-block">
+                        <pre><code>/flag2?query=</code></pre>
+                    </div>
+                        <a href="https://shannmoderz-95f1d384b6d2.herokuapp.com/ephoto360/flag2?query=Shannz" target="_blank">
+                            <button class="blue-button">
+                                Check Example Schema Result
+                            </button>
+                        </a>
+                </div>
+                <div class="small-box" onclick="expandBox(this)">
+                    <div>/deletingtext?</div>
+                    <div class="additional-text">
+                        <div class="colum-container">
+                            <div class="link-box" id="linkBoxDT">https://shannmoderz-95f1d384b6d2.herokuapp.com/ephoto360/deletingtext?query=</div>
+                            <button class="copy-button" onclick="copyToClipboard(document.getElementById('linkBoxDT'))">Copy</button>
+                        </div>
+                    </div>
+                    <div class="text-code">parameter required</div>
+                    <div class="code-block">
+                        <pre><code>/deletingtext?query=</code></pre>
+                    </div>
+                        <a href="https://shannmoderz-95f1d384b6d2.herokuapp.com/ephoto360/deletingtext?query=Shannz" target="_blank">
+                            <button class="blue-button">
+                                Check Example Schema Result
+                            </button>
+                        </a>
+                </div>
+                <div class="small-box" onclick="expandBox(this)">
+                    <div>/blackpinkstyle?</div>
+                    <div class="additional-text">
+                        <div class="colum-container">
+                            <div class="link-box" id="linkBoxBPS">https://shannmoderz-95f1d384b6d2.herokuapp.com/ephoto360/blackpinkstyle?query=</div>
+                            <button class="copy-button" onclick="copyToClipboard(document.getElementById('linkBoxBPS'))">Copy</button>
+                        </div>
+                    </div>
+                    <div class="text-code">parameter required</div>
+                    <div class="code-block">
+                        <pre><code>/blackpinkstyle?query=</code></pre>
+                    </div>
+                        <a href="https://shannmoderz-95f1d384b6d2.herokuapp.com/ephoto360/blackpinkstyle?query=Shannz" target="_blank">
+                            <button class="blue-button">
+                                Check Example Schema Result
+                            </button>
+                        </a>
+                </div>
+                <div class="small-box" onclick="expandBox(this)">
+                    <div>/glowingtext?</div>
+                    <div class="additional-text">
+                        <div class="colum-container">
+                            <div class="link-box" id="linkBoxG2T">https://shannmoderz-95f1d384b6d2.herokuapp.com/ephoto360/glowingtext?query=</div>
+                            <button class="copy-button" onclick="copyToClipboard(document.getElementById('linkBoxG2T'))">Copy</button>
+                        </div>
+                    </div>
+                    <div class="text-code">parameter required</div>
+                    <div class="code-block">
+                        <pre><code>/glowingtext?query=</code></pre>
+                    </div>
+                        <a href="https://shannmoderz-95f1d384b6d2.herokuapp.com/ephoto360/glowingtext?query=Shannz" target="_blank">
+                            <button class="blue-button">
+                                Check Example Schema Result
+                            </button>
+                        </a>
+                </div>
+                <div class="small-box" onclick="expandBox(this)">
+                    <div>/underwater?</div>
+                    <div class="additional-text">
+                        <div class="colum-container">
+                            <div class="link-box" id="linkBoxUW">https://shannmoderz-95f1d384b6d2.herokuapp.com/ephoto360/underwater?query=</div>
+                            <button class="copy-button" onclick="copyToClipboard(document.getElementById('linkBoxUW'))">Copy</button>
+                        </div>
+                    </div>
+                    <div class="text-code">parameter required</div>
+                    <div class="code-block">
+                        <pre><code>/underwater?query=</code></pre>
+                    </div>
+                        <a href="https://shannmoderz-95f1d384b6d2.herokuapp.com/ephoto360/underwater?query=Shannz" target="_blank">
+                            <button class="blue-button">
+                                Check Example Schema Result
+                            </button>
+                        </a>
+                </div>
+                <div class="small-box" onclick="expandBox(this)">
+                    <div>/logomaker?</div>
+                    <div class="additional-text">
+                        <div class="colum-container">
+                            <div class="link-box" id="linkBoxLM">https://shannmoderz-95f1d384b6d2.herokuapp.com/ephoto360/logomaker?query=</div>
+                            <button class="copy-button" onclick="copyToClipboard(document.getElementById('linkBoxLM'))">Copy</button>
+                        </div>
+                    </div>
+                    <div class="text-code">parameter required</div>
+                    <div class="code-block">
+                        <pre><code>/logomaker?query=</code></pre>
+                    </div>
+                        <a href="https://shannmoderz-95f1d384b6d2.herokuapp.com/ephoto360/logomaker?query=Shannz" target="_blank">
+                            <button class="blue-button">
+                                Check Example Schema Result
+                            </button>
+                        </a>
+                </div>
+                <div class="small-box" onclick="expandBox(this)">
+                    <div>/cartoonstyle?</div>
+                    <div class="additional-text">
+                        <div class="colum-container">
+                            <div class="link-box" id="linkBoxCS">https://shannmoderz-95f1d384b6d2.herokuapp.com/ephoto360/cartoonstyle?query=</div>
+                            <button class="copy-button" onclick="copyToClipboard(document.getElementById('linkBoxCS'))">Copy</button>
+                        </div>
+                    </div>
+                    <div class="text-code">parameter required</div>
+                    <div class="code-block">
+                        <pre><code>/cartoonstyle?query=</code></pre>
+                    </div>
+                        <a href="https://shannmoderz-95f1d384b6d2.herokuapp.com/ephoto360/cartoonstyle?query=Shannz" target="_blank">
+                            <button class="blue-button">
+                                Check Example Schema Result
+                            </button>
+                        </a>
+                </div>
+                <div class="small-box" onclick="expandBox(this)">
+                    <div>/papercut?</div>
+                    <div class="additional-text">
+                        <div class="colum-container">
+                            <div class="link-box" id="linkBoxPC">https://shannmoderz-95f1d384b6d2.herokuapp.com/ephoto360/papercut?query=</div>
+                            <button class="copy-button" onclick="copyToClipboard(document.getElementById('linkBoxPC'))">Copy</button>
+                        </div>
+                    </div>
+                    <div class="text-code">parameter required</div>
+                    <div class="code-block">
+                        <pre><code>/papercut?query=</code></pre>
+                    </div>
+                        <a href="https://shannmoderz-95f1d384b6d2.herokuapp.com/ephoto360/papercut?query=Shannz" target="_blank">
+                            <button class="blue-button">
+                                Check Example Schema Result
+                            </button>
+                        </a>
+                </div>
+                <div class="small-box" onclick="expandBox(this)">
+                    <div>/watercolor?</div>
+                    <div class="additional-text">
+                        <div class="colum-container">
+                            <div class="link-box" id="linkBoxWC">https://shannmoderz-95f1d384b6d2.herokuapp.com/ephoto360/watercolor?query=</div>
+                            <button class="copy-button" onclick="copyToClipboard(document.getElementById('linkBoxWC'))">Copy</button>
+                        </div>
+                    </div>
+                    <div class="text-code">parameter required</div>
+                    <div class="code-block">
+                        <pre><code>/watercolor?query=</code></pre>
+                    </div>
+                        <a href="https://shannmoderz-95f1d384b6d2.herokuapp.com/ephoto360/watercolor?query=Shannz" target="_blank">
+                            <button class="blue-button">
+                                Check Example Schema Result
+                            </button>
+                        </a>
+                </div>
+                <div class="small-box" onclick="expandBox(this)">
+                    <div>/effectclouds?</div>
+                    <div class="additional-text">
+                        <div class="colum-container">
+                            <div class="link-box" id="linkBoxEC">https://shannmoderz-95f1d384b6d2.herokuapp.com/ephoto360/effectclouds?query=</div>
+                            <button class="copy-button" onclick="copyToClipboard(document.getElementById('linkBoxEC'))">Copy</button>
+                        </div>
+                    </div>
+                    <div class="text-code">parameter required</div>
+                    <div class="code-block">
+                        <pre><code>/effectclouds?query=</code></pre>
+                    </div>
+                        <a href="https://shannmoderz-95f1d384b6d2.herokuapp.com/ephoto360/effectclouds?query=Shannz" target="_blank">
+                            <button class="blue-button">
+                                Check Example Schema Result
+                            </button>
+                        </a>
+                </div>
+                <div class="small-box" onclick="expandBox(this)">
+                    <div>/gradienttext?</div>
+                    <div class="additional-text">
+                        <div class="colum-container">
+                            <div class="link-box" id="linkBoxGT2">https://shannmoderz-95f1d384b6d2.herokuapp.com/ephoto360/gradienttext?query=</div>
+                            <button class="copy-button" onclick="copyToClipboard(document.getElementById('linkBoxGT2'))">Copy</button>
+                        </div>
+                    </div>
+                    <div class="text-code">parameter required</div>
+                    <div class="code-block">
+                        <pre><code>/gradienttext?query=</code></pre>
+                    </div>
+                        <a href="https://shannmoderz-95f1d384b6d2.herokuapp.com/ephoto360/gradienttext?query=Shannz" target="_blank">
+                            <button class="blue-button">
+                                Check Example Schema Result
+                            </button>
+                        </a>
+                </div>
+                <div class="small-box" onclick="expandBox(this)">
+                    <div>/summerbeach?</div>
+                    <div class="additional-text">
+                        <div class="colum-container">
+                            <div class="link-box" id="linkBoxSB">https://shannmoderz-95f1d384b6d2.herokuapp.com/ephoto360/summerbeach?query=</div>
+                            <button class="copy-button" onclick="copyToClipboard(document.getElementById('linkBoxSB'))">Copy</button>
+                        </div>
+                    </div>
+                    <div class="text-code">parameter required</div>
+                    <div class="code-block">
+                        <pre><code>/summerbeach?query=</code></pre>
+                    </div>
+                        <a href="https://shannmoderz-95f1d384b6d2.herokuapp.com/ephoto360/summerbeach?query=Shannz" target="_blank">
+                            <button class="blue-button">
+                                Check Example Schema Result
+                            </button>
+                        </a>
+                </div>
+                <div class="small-box" onclick="expandBox(this)">
+                    <div>/luxurygold?</div>
+                    <div class="additional-text">
+                        <div class="colum-container">
+                            <div class="link-box" id="linkBoxLG4">https://shannmoderz-95f1d384b6d2.herokuapp.com/ephoto360/luxurygold?query=</div>
+                            <button class="copy-button" onclick="copyToClipboard(document.getElementById('linkBoxLG4'))">Copy</button>
+                        </div>
+                    </div>
+                    <div class="text-code">parameter required</div>
+                    <div class="code-block">
+                        <pre><code>/luxurygold?query=</code></pre>
+                    </div>
+                        <a href="https://shannmoderz-95f1d384b6d2.herokuapp.com/ephoto360/luxurygold?query=Shannz" target="_blank">
+                            <button class="blue-button">
+                                Check Example Schema Result
+                            </button>
+                        </a>
+                </div>
+                <div class="small-box" onclick="expandBox(this)">
+                    <div>/multicolored?</div>
+                    <div class="additional-text">
+                        <div class="colum-container">
+                            <div class="link-box" id="linkBoxML">https://shannmoderz-95f1d384b6d2.herokuapp.com/ephoto360/multicolored?query=</div>
+                            <button class="copy-button" onclick="copyToClipboard(document.getElementById('linkBoxML'))">Copy</button>
+                        </div>
+                    </div>
+                    <div class="text-code">parameter required</div>
+                    <div class="code-block">
+                        <pre><code>/multicolored?query=</code></pre>
+                    </div>
+                        <a href="https://shannmoderz-95f1d384b6d2.herokuapp.com/ephoto360/multicolored?query=Shannz" target="_blank">
+                            <button class="blue-button">
+                                Check Example Schema Result
+                            </button>
+                        </a>
+                </div>
+                <div class="small-box" onclick="expandBox(this)">
+                    <div>/sandsummer?</div>
+                    <div class="additional-text">
+                        <div class="colum-container">
+                            <div class="link-box" id="linkBoxSMG">https://shannmoderz-95f1d384b6d2.herokuapp.com/ephoto360/sandsummer?query=</div>
+                            <button class="copy-button" onclick="copyToClipboard(document.getElementById('linkBoxSMG'))">Copy</button>
+                        </div>
+                    </div>
+                    <div class="text-code">parameter required</div>
+                    <div class="code-block">
+                        <pre><code>/sandsummer?query=</code></pre>
+                    </div>
+                        <a href="https://shannmoderz-95f1d384b6d2.herokuapp.com/ephoto360/sandsummer?query=Shannz" target="_blank">
+                            <button class="blue-button">
+                                Check Example Schema Result
+                            </button>
+                        </a>
+                </div>
+                <div class="small-box" onclick="expandBox(this)">
+                    <div>/galaxy?</div>
+                    <div class="additional-text">
+                        <div class="colum-container">
+                            <div class="link-box" id="linkBoxG">https://shannmoderz-95f1d384b6d2.herokuapp.com/ephoto360/galaxy?query=</div>
+                            <button class="copy-button" onclick="copyToClipboard(document.getElementById('linkBoxG'))">Copy</button>
+                        </div>
+                    </div>
+                    <div class="text-code">parameter required</div>
+                    <div class="code-block">
+                        <pre><code>/galaxy?query=</code></pre>
+                    </div>
+                        <a href="https://shannmoderz-95f1d384b6d2.herokuapp.com/ephoto360/galaxy?query=Shannz" target="_blank">
+                            <button class="blue-button">
+                                Check Example Schema Result
+                            </button>
+                        </a>
+                </div>
+                <div class="small-box" onclick="expandBox(this)">
+                    <div>/1917style?</div>
+                    <div class="additional-text">
+                        <div class="colum-container">
+                            <div class="link-box" id="linkBox1">https://shannmoderz-95f1d384b6d2.herokuapp.com/ephoto360/1917style?query=</div>
+                            <button class="copy-button" onclick="copyToClipboard(document.getElementById('linkBox1'))">Copy</button>
+                        </div>
+                    </div>
+                    <div class="text-code">parameter required</div>
+                    <div class="code-block">
+                        <pre><code>/1917style?query=</code></pre>
+                    </div>
+                        <a href="https://shannmoderz-95f1d384b6d2.herokuapp.com/ephoto360/1917style?query=Shannz" target="_blank">
+                            <button class="blue-button">
+                                Check Example Schema Result
+                            </button>
+                        </a>
+                </div>
+                <div class="small-box" onclick="expandBox(this)">
+                    <div>/makingneon?</div>
+                    <div class="additional-text">
+                        <div class="colum-container">
+                            <div class="link-box" id="linkBoxMN">https://shannmoderz-95f1d384b6d2.herokuapp.com/ephoto360/makingneon?query=</div>
+                            <button class="copy-button" onclick="copyToClipboard(document.getElementById('linkBoxMN'))">Copy</button>
+                        </div>
+                    </div>
+                    <div class="text-code">parameter required</div>
+                    <div class="code-block">
+                        <pre><code>/makingneon?query=</code></pre>
+                    </div>
+                        <a href="https://shannmoderz-95f1d384b6d2.herokuapp.com/ephoto360/makingneon?query=Shannz" target="_blank">
+                            <button class="blue-button">
+                                Check Example Schema Result
+                            </button>
+                        </a>
+                </div>
+                <div class="small-box" onclick="expandBox(this)">
+                    <div>/royaltext?</div>
+                    <div class="additional-text">
+                        <div class="colum-container">
+                            <div class="link-box" id="linkBoxRT">https://shannmoderz-95f1d384b6d2.herokuapp.com/ephoto360/royaltext?query=</div>
+                            <button class="copy-button" onclick="copyToClipboard(document.getElementById('linkBoxRT'))">Copy</button>
+                        </div>
+                    </div>
+                    <div class="text-code">parameter required</div>
+                    <div class="code-block">
+                        <pre><code>/royaltext?query=</code></pre>
+                    </div>
+                        <a href="https://shannmoderz-95f1d384b6d2.herokuapp.com/ephoto360/royaltext?query=Shannz" target="_blank">
+                            <button class="blue-button">
+                                Check Example Schema Result
+                            </button>
+                        </a>
+                </div>
+                <div class="small-box" onclick="expandBox(this)">
+                    <div>/texteffect?</div>
+                    <div class="additional-text">
+                        <div class="colum-container">
+                            <div class="link-box" id="linkBoxTFF">https://shannmoderz-95f1d384b6d2.herokuapp.com/ephoto360/texteffect?query=</div>
+                            <button class="copy-button" onclick="copyToClipboard(document.getElementById('linkBoxTFF'))">Copy</button>
+                        </div>
+                    </div>
+                    <div class="text-code">parameter required</div>
+                    <div class="code-block">
+                        <pre><code>/texteffect?query=</code></pre>
+                    </div>
+                        <a href="https://shannmoderz-95f1d384b6d2.herokuapp.com/ephoto360/texteffect?query=Shannz" target="_blank">
+                            <button class="blue-button">
+                                Check Example Schema Result
+                            </button>
+                        </a>
+                </div>
+                <div class="small-box" onclick="expandBox(this)">
+                    <div>/galaxystyle?</div>
+                    <div class="additional-text">
+                        <div class="colum-container">
+                            <div class="link-box" id="linkBoxGSU">https://shannmoderz-95f1d384b6d2.herokuapp.com/ephoto360/galaxystyle?query=</div>
+                            <button class="copy-button" onclick="copyToClipboard(document.getElementById('linkBoxGSU'))">Copy</button>
+                        </div>
+                    </div>
+                    <div class="text-code">parameter required</div>
+                    <div class="code-block">
+                        <pre><code>/galaxystyle?query=</code></pre>
+                    </div>
+                        <a href="https://shannmoderz-95f1d384b6d2.herokuapp.com/ephoto360/galaxystyle?query=Shannz" target="_blank">
+                            <button class="blue-button">
+                                Check Example Schema Result
+                            </button>
+                        </a>
+                </div>
+                <div class="small-box" onclick="expandBox(this)">
+                    <div>/lighteffect?</div>
+                    <div class="additional-text">
+                        <div class="colum-container">
+                            <div class="link-box" id="linkBoxLEQ">https://shannmoderz-95f1d384b6d2.herokuapp.com/ephoto360/lighteffect?query=</div>
+                            <button class="copy-button" onclick="copyToClipboard(document.getElementById('linkBoxLEQ'))">Copy</button>
+                        </div>
+                    </div>
+                    <div class="text-code">parameter required</div>
+                    <div class="code-block">
+                        <pre><code>/lighteffect?query=</code></pre>
+                    </div>
+                        <a href="https://shannmoderz-95f1d384b6d2.herokuapp.com/ephoto360/lighteffect?query=Shannz" target="_blank">
+                            <button class="blue-button">
+                                Check Example Schema Result
+                            </button>
+                        </a>
                 </div>
             </div>
         </div>

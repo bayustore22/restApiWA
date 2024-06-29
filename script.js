@@ -12,6 +12,37 @@
     }
     fetchStats();
 
+// Fungsi untuk menutup popup pertama dan menampilkan popup kedua
+        function closePopup1() {
+            document.getElementById('popup1').classList.remove('show');
+            setTimeout(function() {
+                document.getElementById('popup1').style.display = 'none';
+                document.getElementById('popup2').style.display = 'flex';
+                setTimeout(function() {
+                    document.getElementById('popup2').classList.add('show');
+                }, 10); // Menambahkan sedikit penundaan untuk memicu transisi
+            }, 100); // Menunggu transisi selesai sebelum menyembunyikan elemen
+        }
+
+        // Fungsi untuk menutup popup kedua
+        function closePopup2() {
+            document.getElementById('popup2').classList.remove('show');
+            setTimeout(function() {
+                document.getElementById('popup2').style.display = 'none';
+            }, 100); // Menunggu transisi selesai sebelum menyembunyikan elemen
+        }
+
+        // Menampilkan loading saat halaman dimuat
+        window.onload = function() {
+            setTimeout(function() {
+                document.getElementById('loading').style.display = 'none';
+                document.getElementById('popup1').style.display = 'flex';
+                setTimeout(function() {
+                    document.getElementById('popup1').classList.add('show');
+                }, 50); // Menambahkan sedikit penundaan untuk memicu transisi
+            }, 8000); // Menampilkan loading selama 3 detik
+        }
+
 document.addEventListener('DOMContentLoaded', function() {
             const menuToggle = document.querySelector('.menu-toggle');
             const menu = document.querySelector('nav');
