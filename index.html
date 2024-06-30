@@ -37,8 +37,10 @@
             <img src="https://telegra.ph/file/3a9af659b6258be78c3a3.jpg" alt="Popup Image">
             <h2>NEW FEATURES!!</h2>
             <ul>
-                <li>Add Endpoint ephoto360</li>
-                <li>Add 30 Model Ephoto</li>
+                <li>Add Fitur Api Checker</li>
+                <li>Add Endpoint Downloader</li>
+                <li>Add 3 Endpoint Search</li>
+                <li>Add 6 Endpoint Downloader</li>
             </ul>
             <button class="close-btn" onclick="closePopup2()">Close</button>
         </div>
@@ -74,18 +76,47 @@
 </div>
 </div>
 </div>
+                
+                <div class="box-container">
+      <div class="big-box">
+        <div class="title">Check APIs Endpoint</div>
+                <div class="small-box" onclick="expandBox(this)">
+  <div>Here We Go</div>
+  <div class="additional-text">
+                <form>   
+                    <pre><code for="method">Select HTTP Method:</code></pre>
+                    <select id="method" onchange="togglePostData()">
+                        <option value="GET">GET</option>
+                        <option value="POST">POST</option>
+                    </select>
+                    <pre><code for="endpoint">Enter API Endpoint:</code></pre>
+                    <input type="text" id="endpoint" placeholder="https://api.example.com/endpoint">
+                    <div class="post-data" id="postDataContainer">
+                        <pre><code for="postData">Enter POST Data (JSON format):</code></pre>
+                        <textarea id="postData" placeholder='{"key": "value"}'></textarea>
+                    </div>
+                    <button type="button" onclick="testApi()">Test API</button>
+                </form>
+                </div>
+                 <div class="text-code">respon json</div> <!-- Add this line -->
+  <div class="code-block">
+    <pre><code id="result">{
+    "status": "true",
+    "code": 200,
+    "author" "Shannz",
+    "result": "string"
+}</code></pre>
+  </div>
+  </div>
+                </div>
+                </div>
+        
         
         <div class="box-container">
             <div class="big-box">
                 <div class="title">/ai</div>
                 <div class="small-box" onclick="expandBox(this)">
   <div>/simsimi?</div>
-  <div class="additional-text">
-    <div class="colum-container">
-      <div class="link-box" id="linkBoxSimi">https://shannmoderz-95f1d384b6d2.herokuapp.com/ai/simsimi?query=</div>
-      <button class="copy-button" onclick="copyToClipboard(document.getElementById('linkBoxSimi'))">Copy</button>
-    </div>
-  </div>
   <div class="text-code">parameter required</div> <!-- Add this line -->
   <div class="code-block">
     <pre><code>/simsimi?query=</code></pre>
@@ -113,12 +144,6 @@ break</code></pre>
 
 <div class="small-box" onclick="expandBox(this)">
   <div>/goody?</div>
-  <div class="additional-text">
-    <div class="colum-container">
-      <div class="link-box" id="linkBoxGoody">https://shannmoderz-95f1d384b6d2.herokuapp.com/ai/goody?query=</div>
-      <button class="copy-button" onclick="copyToClipboard(document.getElementById('linkBoxGoody'))">Copy</button>
-    </div>
-  </div>
   <div class="text-code">parameter required</div> <!-- Add this line -->
   <div class="code-block">
     <pre><code>/goody?query=</code></pre>
@@ -146,12 +171,6 @@ break</code></pre>
 
 <div class="small-box" onclick="expandBox(this)">
   <div>/aoyo?</div>
-  <div class="additional-text">
-    <div class="colum-container">
-      <div class="link-box" id="linkBoxAoyo">https://shannmoderz-95f1d384b6d2.herokuapp.com/ai/aoyo?query=</div>
-      <button class="copy-button" onclick="copyToClipboard(document.getElementById('linkBoxAoyo'))">Copy</button>
-    </div>
-  </div>
   <div class="text-code">parameter required</div> <!-- Add this line -->
   <div class="code-block">
     <pre><code>/aoyo?query=</code></pre>
@@ -179,12 +198,6 @@ break</code></pre>
 
 <div class="small-box" onclick="expandBox(this)">
   <div>/letmegpt?</div>
-  <div class="additional-text">
-    <div class="colum-container">
-      <div class="link-box" id="linkBoxLetme">https://shannmoderz-95f1d384b6d2.herokuapp.com/ai/letmegpt?query=</div>
-      <button class="copy-button" onclick="copyToClipboard(document.getElementById('linkBoxLetme'))">Copy</button>
-    </div>
-  </div>
   <div class="text-code">parameter required</div> <!-- Add this line -->
   <div class="code-block">
     <pre><code>/letmegpt?query=</code></pre>
@@ -212,12 +225,6 @@ break</code></pre>
 
 <div class="small-box" onclick="expandBox(this)">
   <div>/cgt?</div>
-  <div class="additional-text">
-    <div class="colum-container">
-      <div class="link-box" id="linkBoxCgt">https://shannmoderz-95f1d384b6d2.herokuapp.com/ai/cgt?query=</div>
-      <button class="copy-button" onclick="copyToClipboard(document.getElementById('linkBoxCgt'))">Copy</button>
-    </div>
-  </div>
   <div class="text-code">parameter required</div> <!-- Add this line -->
   <div class="code-block">
     <pre><code>/cgt?query=</code></pre>
@@ -246,12 +253,6 @@ break</code></pre>
 
 <div class="small-box" onclick="expandBox(this)">
   <div>/yousearch?</div>
-  <div class="additional-text">
-    <div class="colum-container">
-      <div class="link-box" id="linkBoxYous">https://shannmoderz-95f1d384b6d2.herokuapp.com/ai/yousearch?query=</div>
-      <button class="copy-button" onclick="copyToClipboard(document.getElementById('linkBoxYous'))">Copy</button>
-    </div>
-  </div>
   <div class="text-code">parameter required</div> <!-- Add this line -->
   <div class="code-block">
     <pre><code>/yousearch?query=</code></pre>
@@ -279,12 +280,6 @@ break</code></pre>
 
 <div class="small-box" onclick="expandBox(this)">
   <div>/blackbox?</div>
-  <div class="additional-text">
-    <div class="colum-container">
-      <div class="link-box" id="linkBoxBbox">https://shannmoderz-95f1d384b6d2.herokuapp.com/ai/blackbox?query=</div>
-      <button class="copy-button" onclick="copyToClipboard(document.getElementById('linkBoxBbox'))">Copy</button>
-    </div>
-  </div>
   <div class="text-code">parameter required</div> <!-- Add this line -->
   <div class="code-block">
     <pre><code>/blackbox?query=</code></pre>
@@ -312,12 +307,6 @@ break</code></pre>
 
 <div class="small-box" onclick="expandBox(this)">
   <div>/claude?</div>
-  <div class="additional-text">
-    <div class="colum-container">
-      <div class="link-box" id="linkBoxClaude">https://shannmoderz-95f1d384b6d2.herokuapp.com/ai/claude?query=</div>
-      <button class="copy-button" onclick="copyToClipboard(document.getElementById('linkBoxClaude'))">Copy</button>
-    </div>
-  </div>
   <div class="text-code">parameter required</div> <!-- Add this line -->
   <div class="code-block">
     <pre><code>/claude?query=</code></pre>
@@ -345,12 +334,6 @@ break</code></pre>
 
 <div class="small-box" onclick="expandBox(this)">
   <div>/luminai?</div>
-  <div class="additional-text">
-    <div class="colum-container">
-      <div class="link-box" id="linkBoxLumin">https://shannmoderz-95f1d384b6d2.herokuapp.com/ai/luminai?query=</div>
-      <button class="copy-button" onclick="copyToClipboard(document.getElementById('linkBoxLumin'))">Copy</button>
-    </div>
-  </div>
   <div class="text-code">parameter required</div> <!-- Add this line -->
   <div class="code-block">
     <pre><code>/luminai?query=</code></pre>
@@ -378,12 +361,6 @@ break</code></pre>
 
 <div class="small-box" onclick="expandBox(this)">
   <div>/lepton?</div>
-  <div class="additional-text">
-    <div class="colum-container">
-      <div class="link-box" id="linkBoxLepton">https://shannmoderz-95f1d384b6d2.herokuapp.com/ai/lepton?query=</div>
-      <button class="copy-button" onclick="copyToClipboard(document.getElementById('linkBoxLepton'))">Copy</button>
-    </div>
-  </div>
   <div class="text-code">parameter required</div> <!-- Add this line -->
   <div class="code-block">
     <pre><code>/lepton?query=</code></pre>
@@ -411,12 +388,6 @@ break</code></pre>
 
 <div class="small-box" onclick="expandBox(this)">
   <div>/prod?</div>
-  <div class="additional-text">
-    <div class="colum-container">
-      <div class="link-box" id="linkBoxProd">https://shannmoderz-95f1d384b6d2.herokuapp.com/ai/prod?query=</div>
-      <button class="copy-button" onclick="copyToClipboard(document.getElementById('linkBoxProd'))">Copy</button>
-    </div>
-  </div>
   <div class="text-code">parameter required</div> <!-- Add this line -->
   <div class="code-block">
     <pre><code>/prod?query=</code></pre>
@@ -444,12 +415,6 @@ break</code></pre>
 
 <div class="small-box" onclick="expandBox(this)">
   <div>/tudou?</div>
-  <div class="additional-text">
-    <div class="colum-container">
-      <div class="link-box" id="linkBoxTudou">https://shannmoderz-95f1d384b6d2.herokuapp.com/ai/tudou?query=</div>
-      <button class="copy-button" onclick="copyToClipboard(document.getElementById('linkBoxTudou'))">Copy</button>
-    </div>
-  </div>
   <div class="text-code">parameter required</div> <!-- Add this line -->
   <div class="code-block">
     <pre><code>/tudou?query=&prompt=</code></pre>
@@ -483,12 +448,6 @@ break</code></pre>
                 <div class="title">/search</div>
                 <div class="small-box" onclick="expandBox(this)">
                     <div>/playstore?</div>
-                    <div class="additional-text">
-                        <div class="colum-container">
-                            <div class="link-box" id="linkBoxPlaystore">https://shannmoderz-95f1d384b6d2.herokuapp.com/search/playstore?query=</div>
-                            <button class="copy-button" onclick="copyToClipboard(document.getElementById('linkBoxPlaystore'))">Copy</button>
-                        </div>
-                    </div>
                     <div class="text-code">parameter required</div>
                     <div class="code-block">
                         <pre><code>/playstore?query=</code></pre>
@@ -516,12 +475,6 @@ break</code></pre>
 
                 <div class="small-box" onclick="expandBox(this)">
                     <div>/android1?</div>
-                    <div class="additional-text">
-                        <div class="colum-container">
-                            <div class="link-box" id="linkBoxan1">https://shannmoderz-95f1d384b6d2.herokuapp.com/search/android1?query=</div>
-                            <button class="copy-button" onclick="copyToClipboard(document.getElementById('linkBoxan1'))">Copy</button>
-                        </div>
-                    </div>
                     <div class="text-code">parameter required</div>
                     <div class="code-block">
                         <pre><code>/android1?query=</code></pre>
@@ -549,12 +502,6 @@ break</code></pre>
 
                 <div class="small-box" onclick="expandBox(this)">
                     <div>/happymod?</div>
-                    <div class="additional-text">
-                        <div class="colum-container">
-                            <div class="link-box" id="linkBoxHpy">https://shannmoderz-95f1d384b6d2.herokuapp.com/search/happymod?query=</div>
-                            <button class="copy-button" onclick="copyToClipboard(document.getElementById('linkBoxHpy'))">Copy</button>
-                        </div>
-                    </div>
                     <div class="text-code">parameter required</div>
                     <div class="code-block">
                         <pre><code>/happymod?query=</code></pre>
@@ -581,12 +528,6 @@ break</code></pre>
                 </div>
                 <div class="small-box" onclick="expandBox(this)">
                     <div>/webtoons?</div>
-                    <div class="additional-text">
-                        <div class="colum-container">
-                            <div class="link-box" id="linkBoxWebt">https://shannmoderz-95f1d384b6d2.herokuapp.com/search/webtoons?query=</div>
-                            <button class="copy-button" onclick="copyToClipboard(document.getElementById('linkBoxWebt'))">Copy</button>
-                        </div>
-                    </div>
                     <div class="text-code">parameter required</div>
                     <div class="code-block">
                         <pre><code>/webtoons?query=</code></pre>
@@ -613,12 +554,6 @@ break</code></pre>
                 </div>
                 <div class="small-box" onclick="expandBox(this)">
                     <div>/mangatoon?</div>
-                    <div class="additional-text">
-                        <div class="colum-container">
-                            <div class="link-box" id="linkBoxMangt">https://shannmoderz-95f1d384b6d2.herokuapp.com/search/mangatoon?query=</div>
-                            <button class="copy-button" onclick="copyToClipboard(document.getElementById('linkBoxMangt'))">Copy</button>
-                        </div>
-                    </div>
                     <div class="text-code">parameter required</div>
                     <div class="code-block">
                         <pre><code>/mangatoon?query=</code></pre>
@@ -645,12 +580,6 @@ break</code></pre>
                 </div>
                 <div class="small-box" onclick="expandBox(this)">
                     <div>/wattpad?</div>
-                    <div class="additional-text">
-                        <div class="colum-container">
-                            <div class="link-box" id="linkBoxWat">https://shannmoderz-95f1d384b6d2.herokuapp.com/search/wattpad?query=</div>
-                            <button class="copy-button" onclick="copyToClipboard(document.getElementById('linkBoxWat'))">Copy</button>
-                        </div>
-                    </div>
                     <div class="text-code">parameter required</div>
                     <div class="code-block">
                         <pre><code>/wattpad?query=</code></pre>
@@ -677,12 +606,6 @@ break</code></pre>
                 </div>
                 <div class="small-box" onclick="expandBox(this)">
                     <div>/bukalapak?</div>
-                    <div class="additional-text">
-                        <div class="colum-container">
-                            <div class="link-box" id="linkBoxBL">https://shannmoderz-95f1d384b6d2.herokuapp.com/search/bukalapak?query=</div>
-                            <button class="copy-button" onclick="copyToClipboard(document.getElementById('linkBoxBL'))">Copy</button>
-                        </div>
-                    </div>
                     <div class="text-code">parameter required</div>
                     <div class="code-block">
                         <pre><code>/bukalapak?query=</code></pre>
@@ -709,12 +632,6 @@ break</code></pre>
                 </div>
                 <div class="small-box" onclick="expandBox(this)">
                     <div>/cariresep?</div>
-                    <div class="additional-text">
-                        <div class="colum-container">
-                            <div class="link-box" id="linkBoxCresep">https://shannmoderz-95f1d384b6d2.herokuapp.com/search/cariresep?query=</div>
-                            <button class="copy-button" onclick="copyToClipboard(document.getElementById('linkBoxCresep'))">Copy</button>
-                        </div>
-                    </div>
                     <div class="text-code">parameter required</div>
                     <div class="code-block">
                         <pre><code>/cariresep?query=</code></pre>
@@ -741,12 +658,6 @@ break</code></pre>
                 </div>
                 <div class="small-box" onclick="expandBox(this)">
                     <div>/stickersearch?</div>
-                    <div class="additional-text">
-                        <div class="colum-container">
-                            <div class="link-box" id="linkBoxStickers">https://shannmoderz-95f1d384b6d2.herokuapp.com/search/stickersearch?query=</div>
-                            <button class="copy-button" onclick="copyToClipboard(document.getElementById('linkBoxStickers'))">Copy</button>
-                        </div>
-                    </div>
                     <div class="text-code">parameter required</div>
                     <div class="code-block">
                         <pre><code>/stickersearch?query=</code></pre>
@@ -774,12 +685,6 @@ break</code></pre>
                 </div>
                 <div class="small-box" onclick="expandBox(this)">
                     <div>/seegore?</div>
-                    <div class="additional-text">
-                        <div class="colum-container">
-                            <div class="link-box" id="linkBoxGore">https://shannmoderz-95f1d384b6d2.herokuapp.com/search/seegore?query=</div>
-                            <button class="copy-button" onclick="copyToClipboard(document.getElementById('linkBoxGore'))">Copy</button>
-                        </div>
-                    </div>
                     <div class="text-code">parameter required</div>
                     <div class="code-block">
                         <pre><code>/seegore?query=</code></pre>
@@ -806,12 +711,6 @@ break</code></pre>
                 </div>
                 <div class="small-box" onclick="expandBox(this)">
                     <div>/filmapik21?</div>
-                    <div class="additional-text">
-                        <div class="colum-container">
-                            <div class="link-box" id="linkBoxApik">https://shannmoderz-95f1d384b6d2.herokuapp.com/search/filmapik21?query=</div>
-                            <button class="copy-button" onclick="copyToClipboard(document.getElementById('linkBoxApik'))">Copy</button>
-                        </div>
-                    </div>
                     <div class="text-code">parameter required</div>
                     <div class="code-block">
                         <pre><code>/filmapik21?query=</code></pre>
@@ -836,9 +735,93 @@ break</code></pre>
                             </button>
                         </a>
                 </div>
+                
+                <div class="small-box" onclick="expandBox(this)">
+                    <div>/aptoide?</div>
+                    <div class="text-code">parameter required</div>
+                    <div class="code-block">
+                        <pre><code>/aptoide?query=</code></pre>
+                    </div>
+                    <div class="text-code">simple case code</div>
+                    <div class="code-block">
+                        <pre><code>case 'aptoide': {
+  if (!text) return m.reply('masukkan nama aplikasi!')
+  try {
+    let aptoide = await (await fetch(`https://shannmoderz-95f1d384b6d2.herokuapp.com/search/aptoide?query=${text}`)).json()
+    let pick = aptoide.result[0]
+    let shannz = `Nama: ${pick.name}\nId: ${pick.id}`
+    m.reply(shannz)
+  } catch (err) {
+      m.reply('masukkan query lainnya atau coba lagi nanti')
+    }
+}
+break</code></pre>
+                    </div>
+                        <a href="https://shannmoderz-95f1d384b6d2.herokuapp.com/downloader/aptoide?id=com.mobile.legends" target="_blank">
+                            <button class="blue-button">
+                                Check Example Schema Result
+                            </button>
+                        </a>
+                    </div>
+                    
+                  <div class="small-box" onclick="expandBox(this)">
+                    <div>/apkcombo?</div>
+                    <div class="text-code">parameter required</div>
+                    <div class="code-block">
+                        <pre><code>/apkcombo?query=</code></pre>
+                    </div>
+                    <div class="text-code">simple case code</div>
+                    <div class="code-block">
+                        <pre><code>case 'apkcombo': {
+  if (!text) return m.reply('masukkan nama aplikasi!')
+  try {
+    let combo = await (await fetch(`https://shannmoderz-95f1d384b6d2.herokuapp.com/search/apkcombo?query=${text}`)).json()
+    let apk = combo.result[0]
+    let shannz = `Name: ${apk.name}\nLink: ${apk.link}`
+    m.reply(shannz)
+  } catch (err) {
+      m.reply('masukkan query lainnya atau coba lagi nanti')
+    }
+}
+break</code></pre>
+                    </div>
+                        <a href="https://shannmoderz-95f1d384b6d2.herokuapp.com/search/apkcombo?query=honor+of+king" target="_blank">
+                            <button class="blue-button">
+                                Check Example Schema Result
+                            </button>
+                        </a>
+                    </div>
+                   
+                   <div class="small-box" onclick="expandBox(this)">
+                    <div>/tiktok?</div>
+                    <div class="text-code">parameter required</div>
+                    <div class="code-block">
+                        <pre><code>/tiktok?query=</code></pre>
+                    </div>
+                    <div class="text-code">simple case code</div>
+                    <div class="code-block">
+                        <pre><code>case 'tiktoksearch': {
+  if (!text) return m.reply('masukkan subjek video!')
+  try {
+    let tts = await (await fetch(`https://shannmoderz-95f1d384b6d2.herokuapp.com/search/tiktok?query=${text}`)).json()
+    let shannz = tts.result
+    Shannz.sendMessage(m.chat, { video: { url: shannz.no_watermark }, caption: shannz.title },{ quoted: m })
+    m.reply(shannz)
+  } catch (err) {
+      m.reply('masukkan query lainnya atau coba lagi nanti')
+    }
+}
+break</code></pre>
+                    </div>
+                        <a href="https://shannmoderz-95f1d384b6d2.herokuapp.com/search/tiktok?query=christy+jkt48" target="_blank">
+                            <button class="blue-button">
+                                Check Example Schema Result
+                            </button>
+                        </a>
+                    </div>
             </div>
         </div>
-        
+               
         <div class="box-container">
             <div class="big-box">
                 <div class="title">/ephoto360</div>
@@ -861,12 +844,6 @@ break</code></pre>
                 </div>
                 <div class="small-box" onclick="expandBox(this)">
                     <div>/glitchtext?</div>
-                    <div class="additional-text">
-                        <div class="colum-container">
-                            <div class="link-box" id="linkBoxGT">https://shannmoderz-95f1d384b6d2.herokuapp.com/ephoto360/glitchtext?query=</div>
-                            <button class="copy-button" onclick="copyToClipboard(document.getElementById('linkBoxGT'))">Copy</button>
-                        </div>
-                    </div>
                     <div class="text-code">parameter required</div>
                     <div class="code-block">
                         <pre><code>/glitchtext?query=</code></pre>
@@ -879,12 +856,6 @@ break</code></pre>
                 </div>
                 <div class="small-box" onclick="expandBox(this)">
                     <div>/writetext?</div>
-                    <div class="additional-text">
-                        <div class="colum-container">
-                            <div class="link-box" id="linkBoxWT">https://shannmoderz-95f1d384b6d2.herokuapp.com/ephoto360/writetext?query=</div>
-                            <button class="copy-button" onclick="copyToClipboard(document.getElementById('linkBoxWT'))">Copy</button>
-                        </div>
-                    </div>
                     <div class="text-code">parameter required</div>
                     <div class="code-block">
                         <pre><code>/writetext?query=</code></pre>
@@ -897,12 +868,6 @@ break</code></pre>
                 </div>
                 <div class="small-box" onclick="expandBox(this)">
                     <div>/blackpinklogo?</div>
-                    <div class="additional-text">
-                        <div class="colum-container">
-                            <div class="link-box" id="linkBoxBPL">https://shannmoderz-95f1d384b6d2.herokuapp.com/ephoto360/blackpinklogo?query=</div>
-                            <button class="copy-button" onclick="copyToClipboard(document.getElementById('linkBoxBPL'))">Copy</button>
-                        </div>
-                    </div>
                     <div class="text-code">parameter required</div>
                     <div class="code-block">
                         <pre><code>/blakpinklogo?query=</code></pre>
@@ -915,12 +880,6 @@ break</code></pre>
                 </div>
                 <div class="small-box" onclick="expandBox(this)">
                     <div>/advancedglow?</div>
-                    <div class="additional-text">
-                        <div class="colum-container">
-                            <div class="link-box" id="linkBoxAG">https://shannmoderz-95f1d384b6d2.herokuapp.com/ephoto360/advancedglow?query=</div>
-                            <button class="copy-button" onclick="copyToClipboard(document.getElementById('linkBoxAG'))">Copy</button>
-                        </div>
-                    </div>
                     <div class="text-code">parameter required</div>
                     <div class="code-block">
                         <pre><code>/advancedglow?query=</code></pre>
@@ -933,12 +892,6 @@ break</code></pre>
                 </div>
                 <div class="small-box" onclick="expandBox(this)">
                     <div>/typographytext?</div>
-                    <div class="additional-text">
-                        <div class="colum-container">
-                            <div class="link-box" id="linkBoxTT">https://shannmoderz-95f1d384b6d2.herokuapp.com/ephoto360/typographytext?query=</div>
-                            <button class="copy-button" onclick="copyToClipboard(document.getElementById('linkBoxTT'))">Copy</button>
-                        </div>
-                    </div>
                     <div class="text-code">parameter required</div>
                     <div class="code-block">
                         <pre><code>/typographytext?query=</code></pre>
@@ -951,12 +904,6 @@ break</code></pre>
                 </div>
                 <div class="small-box" onclick="expandBox(this)">
                     <div>/pixelglitch?</div>
-                    <div class="additional-text">
-                        <div class="colum-container">
-                            <div class="link-box" id="linkBoxPG">https://shannmoderz-95f1d384b6d2.herokuapp.com/ephoto360/pixelgitch?query=</div>
-                            <button class="copy-button" onclick="copyToClipboard(document.getElementById('linkBoxPG'))">Copy</button>
-                        </div>
-                    </div>
                     <div class="text-code">parameter required</div>
                     <div class="code-block">
                         <pre><code>/pixelglitch?query=</code></pre>
@@ -969,12 +916,6 @@ break</code></pre>
                 </div>
                 <div class="small-box" onclick="expandBox(this)">
                     <div>/neonglitch?</div>
-                    <div class="additional-text">
-                        <div class="colum-container">
-                            <div class="link-box" id="linkBoxNG">https://shannmoderz-95f1d384b6d2.herokuapp.com/ephoto360/neonglitch?query=</div>
-                            <button class="copy-button" onclick="copyToClipboard(document.getElementById('linkBoxNG'))">Copy</button>
-                        </div>
-                    </div>
                     <div class="text-code">parameter required</div>
                     <div class="code-block">
                         <pre><code>/neonglitch?query=</code></pre>
@@ -987,12 +928,6 @@ break</code></pre>
                 </div>
                 <div class="small-box" onclick="expandBox(this)">
                     <div>/flag?</div>
-                    <div class="additional-text">
-                        <div class="colum-container">
-                            <div class="link-box" id="linkBoxF">https://shannmoderz-95f1d384b6d2.herokuapp.com/ephoto360/flag?query=</div>
-                            <button class="copy-button" onclick="copyToClipboard(document.getElementById('linkBoxF'))">Copy</button>
-                        </div>
-                    </div>
                     <div class="text-code">parameter required</div>
                     <div class="code-block">
                         <pre><code>/flag?query=</code></pre>
@@ -1005,12 +940,6 @@ break</code></pre>
                 </div>
                 <div class="small-box" onclick="expandBox(this)">
                     <div>/flag2?</div>
-                    <div class="additional-text">
-                        <div class="colum-container">
-                            <div class="link-box" id="linkBoxF2">https://shannmoderz-95f1d384b6d2.herokuapp.com/ephoto360/flag2?query=</div>
-                            <button class="copy-button" onclick="copyToClipboard(document.getElementById('linkBoxF2'))">Copy</button>
-                        </div>
-                    </div>
                     <div class="text-code">parameter required</div>
                     <div class="code-block">
                         <pre><code>/flag2?query=</code></pre>
@@ -1023,12 +952,6 @@ break</code></pre>
                 </div>
                 <div class="small-box" onclick="expandBox(this)">
                     <div>/deletingtext?</div>
-                    <div class="additional-text">
-                        <div class="colum-container">
-                            <div class="link-box" id="linkBoxDT">https://shannmoderz-95f1d384b6d2.herokuapp.com/ephoto360/deletingtext?query=</div>
-                            <button class="copy-button" onclick="copyToClipboard(document.getElementById('linkBoxDT'))">Copy</button>
-                        </div>
-                    </div>
                     <div class="text-code">parameter required</div>
                     <div class="code-block">
                         <pre><code>/deletingtext?query=</code></pre>
@@ -1041,12 +964,6 @@ break</code></pre>
                 </div>
                 <div class="small-box" onclick="expandBox(this)">
                     <div>/blackpinkstyle?</div>
-                    <div class="additional-text">
-                        <div class="colum-container">
-                            <div class="link-box" id="linkBoxBPS">https://shannmoderz-95f1d384b6d2.herokuapp.com/ephoto360/blackpinkstyle?query=</div>
-                            <button class="copy-button" onclick="copyToClipboard(document.getElementById('linkBoxBPS'))">Copy</button>
-                        </div>
-                    </div>
                     <div class="text-code">parameter required</div>
                     <div class="code-block">
                         <pre><code>/blackpinkstyle?query=</code></pre>
@@ -1059,12 +976,6 @@ break</code></pre>
                 </div>
                 <div class="small-box" onclick="expandBox(this)">
                     <div>/glowingtext?</div>
-                    <div class="additional-text">
-                        <div class="colum-container">
-                            <div class="link-box" id="linkBoxG2T">https://shannmoderz-95f1d384b6d2.herokuapp.com/ephoto360/glowingtext?query=</div>
-                            <button class="copy-button" onclick="copyToClipboard(document.getElementById('linkBoxG2T'))">Copy</button>
-                        </div>
-                    </div>
                     <div class="text-code">parameter required</div>
                     <div class="code-block">
                         <pre><code>/glowingtext?query=</code></pre>
@@ -1077,12 +988,6 @@ break</code></pre>
                 </div>
                 <div class="small-box" onclick="expandBox(this)">
                     <div>/underwater?</div>
-                    <div class="additional-text">
-                        <div class="colum-container">
-                            <div class="link-box" id="linkBoxUW">https://shannmoderz-95f1d384b6d2.herokuapp.com/ephoto360/underwater?query=</div>
-                            <button class="copy-button" onclick="copyToClipboard(document.getElementById('linkBoxUW'))">Copy</button>
-                        </div>
-                    </div>
                     <div class="text-code">parameter required</div>
                     <div class="code-block">
                         <pre><code>/underwater?query=</code></pre>
@@ -1095,12 +1000,6 @@ break</code></pre>
                 </div>
                 <div class="small-box" onclick="expandBox(this)">
                     <div>/logomaker?</div>
-                    <div class="additional-text">
-                        <div class="colum-container">
-                            <div class="link-box" id="linkBoxLM">https://shannmoderz-95f1d384b6d2.herokuapp.com/ephoto360/logomaker?query=</div>
-                            <button class="copy-button" onclick="copyToClipboard(document.getElementById('linkBoxLM'))">Copy</button>
-                        </div>
-                    </div>
                     <div class="text-code">parameter required</div>
                     <div class="code-block">
                         <pre><code>/logomaker?query=</code></pre>
@@ -1113,12 +1012,6 @@ break</code></pre>
                 </div>
                 <div class="small-box" onclick="expandBox(this)">
                     <div>/cartoonstyle?</div>
-                    <div class="additional-text">
-                        <div class="colum-container">
-                            <div class="link-box" id="linkBoxCS">https://shannmoderz-95f1d384b6d2.herokuapp.com/ephoto360/cartoonstyle?query=</div>
-                            <button class="copy-button" onclick="copyToClipboard(document.getElementById('linkBoxCS'))">Copy</button>
-                        </div>
-                    </div>
                     <div class="text-code">parameter required</div>
                     <div class="code-block">
                         <pre><code>/cartoonstyle?query=</code></pre>
@@ -1131,12 +1024,6 @@ break</code></pre>
                 </div>
                 <div class="small-box" onclick="expandBox(this)">
                     <div>/papercut?</div>
-                    <div class="additional-text">
-                        <div class="colum-container">
-                            <div class="link-box" id="linkBoxPC">https://shannmoderz-95f1d384b6d2.herokuapp.com/ephoto360/papercut?query=</div>
-                            <button class="copy-button" onclick="copyToClipboard(document.getElementById('linkBoxPC'))">Copy</button>
-                        </div>
-                    </div>
                     <div class="text-code">parameter required</div>
                     <div class="code-block">
                         <pre><code>/papercut?query=</code></pre>
@@ -1149,12 +1036,6 @@ break</code></pre>
                 </div>
                 <div class="small-box" onclick="expandBox(this)">
                     <div>/watercolor?</div>
-                    <div class="additional-text">
-                        <div class="colum-container">
-                            <div class="link-box" id="linkBoxWC">https://shannmoderz-95f1d384b6d2.herokuapp.com/ephoto360/watercolor?query=</div>
-                            <button class="copy-button" onclick="copyToClipboard(document.getElementById('linkBoxWC'))">Copy</button>
-                        </div>
-                    </div>
                     <div class="text-code">parameter required</div>
                     <div class="code-block">
                         <pre><code>/watercolor?query=</code></pre>
@@ -1167,12 +1048,6 @@ break</code></pre>
                 </div>
                 <div class="small-box" onclick="expandBox(this)">
                     <div>/effectclouds?</div>
-                    <div class="additional-text">
-                        <div class="colum-container">
-                            <div class="link-box" id="linkBoxEC">https://shannmoderz-95f1d384b6d2.herokuapp.com/ephoto360/effectclouds?query=</div>
-                            <button class="copy-button" onclick="copyToClipboard(document.getElementById('linkBoxEC'))">Copy</button>
-                        </div>
-                    </div>
                     <div class="text-code">parameter required</div>
                     <div class="code-block">
                         <pre><code>/effectclouds?query=</code></pre>
@@ -1185,12 +1060,6 @@ break</code></pre>
                 </div>
                 <div class="small-box" onclick="expandBox(this)">
                     <div>/gradienttext?</div>
-                    <div class="additional-text">
-                        <div class="colum-container">
-                            <div class="link-box" id="linkBoxGT2">https://shannmoderz-95f1d384b6d2.herokuapp.com/ephoto360/gradienttext?query=</div>
-                            <button class="copy-button" onclick="copyToClipboard(document.getElementById('linkBoxGT2'))">Copy</button>
-                        </div>
-                    </div>
                     <div class="text-code">parameter required</div>
                     <div class="code-block">
                         <pre><code>/gradienttext?query=</code></pre>
@@ -1203,12 +1072,6 @@ break</code></pre>
                 </div>
                 <div class="small-box" onclick="expandBox(this)">
                     <div>/summerbeach?</div>
-                    <div class="additional-text">
-                        <div class="colum-container">
-                            <div class="link-box" id="linkBoxSB">https://shannmoderz-95f1d384b6d2.herokuapp.com/ephoto360/summerbeach?query=</div>
-                            <button class="copy-button" onclick="copyToClipboard(document.getElementById('linkBoxSB'))">Copy</button>
-                        </div>
-                    </div>
                     <div class="text-code">parameter required</div>
                     <div class="code-block">
                         <pre><code>/summerbeach?query=</code></pre>
@@ -1221,12 +1084,6 @@ break</code></pre>
                 </div>
                 <div class="small-box" onclick="expandBox(this)">
                     <div>/luxurygold?</div>
-                    <div class="additional-text">
-                        <div class="colum-container">
-                            <div class="link-box" id="linkBoxLG4">https://shannmoderz-95f1d384b6d2.herokuapp.com/ephoto360/luxurygold?query=</div>
-                            <button class="copy-button" onclick="copyToClipboard(document.getElementById('linkBoxLG4'))">Copy</button>
-                        </div>
-                    </div>
                     <div class="text-code">parameter required</div>
                     <div class="code-block">
                         <pre><code>/luxurygold?query=</code></pre>
@@ -1239,12 +1096,6 @@ break</code></pre>
                 </div>
                 <div class="small-box" onclick="expandBox(this)">
                     <div>/multicolored?</div>
-                    <div class="additional-text">
-                        <div class="colum-container">
-                            <div class="link-box" id="linkBoxML">https://shannmoderz-95f1d384b6d2.herokuapp.com/ephoto360/multicolored?query=</div>
-                            <button class="copy-button" onclick="copyToClipboard(document.getElementById('linkBoxML'))">Copy</button>
-                        </div>
-                    </div>
                     <div class="text-code">parameter required</div>
                     <div class="code-block">
                         <pre><code>/multicolored?query=</code></pre>
@@ -1257,12 +1108,6 @@ break</code></pre>
                 </div>
                 <div class="small-box" onclick="expandBox(this)">
                     <div>/sandsummer?</div>
-                    <div class="additional-text">
-                        <div class="colum-container">
-                            <div class="link-box" id="linkBoxSMG">https://shannmoderz-95f1d384b6d2.herokuapp.com/ephoto360/sandsummer?query=</div>
-                            <button class="copy-button" onclick="copyToClipboard(document.getElementById('linkBoxSMG'))">Copy</button>
-                        </div>
-                    </div>
                     <div class="text-code">parameter required</div>
                     <div class="code-block">
                         <pre><code>/sandsummer?query=</code></pre>
@@ -1275,12 +1120,6 @@ break</code></pre>
                 </div>
                 <div class="small-box" onclick="expandBox(this)">
                     <div>/galaxy?</div>
-                    <div class="additional-text">
-                        <div class="colum-container">
-                            <div class="link-box" id="linkBoxG">https://shannmoderz-95f1d384b6d2.herokuapp.com/ephoto360/galaxy?query=</div>
-                            <button class="copy-button" onclick="copyToClipboard(document.getElementById('linkBoxG'))">Copy</button>
-                        </div>
-                    </div>
                     <div class="text-code">parameter required</div>
                     <div class="code-block">
                         <pre><code>/galaxy?query=</code></pre>
@@ -1293,12 +1132,6 @@ break</code></pre>
                 </div>
                 <div class="small-box" onclick="expandBox(this)">
                     <div>/1917style?</div>
-                    <div class="additional-text">
-                        <div class="colum-container">
-                            <div class="link-box" id="linkBox1">https://shannmoderz-95f1d384b6d2.herokuapp.com/ephoto360/1917style?query=</div>
-                            <button class="copy-button" onclick="copyToClipboard(document.getElementById('linkBox1'))">Copy</button>
-                        </div>
-                    </div>
                     <div class="text-code">parameter required</div>
                     <div class="code-block">
                         <pre><code>/1917style?query=</code></pre>
@@ -1311,12 +1144,6 @@ break</code></pre>
                 </div>
                 <div class="small-box" onclick="expandBox(this)">
                     <div>/makingneon?</div>
-                    <div class="additional-text">
-                        <div class="colum-container">
-                            <div class="link-box" id="linkBoxMN">https://shannmoderz-95f1d384b6d2.herokuapp.com/ephoto360/makingneon?query=</div>
-                            <button class="copy-button" onclick="copyToClipboard(document.getElementById('linkBoxMN'))">Copy</button>
-                        </div>
-                    </div>
                     <div class="text-code">parameter required</div>
                     <div class="code-block">
                         <pre><code>/makingneon?query=</code></pre>
@@ -1329,12 +1156,6 @@ break</code></pre>
                 </div>
                 <div class="small-box" onclick="expandBox(this)">
                     <div>/royaltext?</div>
-                    <div class="additional-text">
-                        <div class="colum-container">
-                            <div class="link-box" id="linkBoxRT">https://shannmoderz-95f1d384b6d2.herokuapp.com/ephoto360/royaltext?query=</div>
-                            <button class="copy-button" onclick="copyToClipboard(document.getElementById('linkBoxRT'))">Copy</button>
-                        </div>
-                    </div>
                     <div class="text-code">parameter required</div>
                     <div class="code-block">
                         <pre><code>/royaltext?query=</code></pre>
@@ -1347,12 +1168,6 @@ break</code></pre>
                 </div>
                 <div class="small-box" onclick="expandBox(this)">
                     <div>/texteffect?</div>
-                    <div class="additional-text">
-                        <div class="colum-container">
-                            <div class="link-box" id="linkBoxTFF">https://shannmoderz-95f1d384b6d2.herokuapp.com/ephoto360/texteffect?query=</div>
-                            <button class="copy-button" onclick="copyToClipboard(document.getElementById('linkBoxTFF'))">Copy</button>
-                        </div>
-                    </div>
                     <div class="text-code">parameter required</div>
                     <div class="code-block">
                         <pre><code>/texteffect?query=</code></pre>
@@ -1365,12 +1180,6 @@ break</code></pre>
                 </div>
                 <div class="small-box" onclick="expandBox(this)">
                     <div>/galaxystyle?</div>
-                    <div class="additional-text">
-                        <div class="colum-container">
-                            <div class="link-box" id="linkBoxGSU">https://shannmoderz-95f1d384b6d2.herokuapp.com/ephoto360/galaxystyle?query=</div>
-                            <button class="copy-button" onclick="copyToClipboard(document.getElementById('linkBoxGSU'))">Copy</button>
-                        </div>
-                    </div>
                     <div class="text-code">parameter required</div>
                     <div class="code-block">
                         <pre><code>/galaxystyle?query=</code></pre>
@@ -1383,12 +1192,6 @@ break</code></pre>
                 </div>
                 <div class="small-box" onclick="expandBox(this)">
                     <div>/lighteffect?</div>
-                    <div class="additional-text">
-                        <div class="colum-container">
-                            <div class="link-box" id="linkBoxLEQ">https://shannmoderz-95f1d384b6d2.herokuapp.com/ephoto360/lighteffect?query=</div>
-                            <button class="copy-button" onclick="copyToClipboard(document.getElementById('linkBoxLEQ'))">Copy</button>
-                        </div>
-                    </div>
                     <div class="text-code">parameter required</div>
                     <div class="code-block">
                         <pre><code>/lighteffect?query=</code></pre>
@@ -1401,8 +1204,173 @@ break</code></pre>
                 </div>
             </div>
         </div>
-
-        <div class="popup" id="popup">copied ✅</div>
+        
+        <div class="box-container">
+            <div class="big-box">
+                <div class="title">/downloader</div>
+                <div class="small-box" onclick="expandBox(this)">
+                    <div>/tiktok?</div>
+                    <div class="text-code">parameter required</div>
+                    <div class="code-block">
+                        <pre><code>/tiktok?url=</code></pre>
+                    </div>
+                    <div class="text-code">simple case code</div>
+                    <div class="code-block">
+                        <pre><code>case 'tiktok': {
+  if (!text) return m.reply('masukkan url video tiktok!')
+  try {
+    let tiktok = await (await fetch(`https://shannmoderz-95f1d384b6d2.herokuapp.com/downloader/tiktok?url=${text}`)).json()
+    let shannz = tiktok.result.data
+    Shannz.sendMessage( m.chat, { video: { url: shannz.hdplay }, caption: `${shannz.title}` },{ quoted: m })
+  } catch (err) {
+      m.reply('masukkan query lainnya atau coba lagi nanti')
+    }
+}
+break</code></pre>
+                    </div>
+                        <a href="https://shannmoderz-95f1d384b6d2.herokuapp.com/downloader/tiktok?url=https://vt.tiktok.com/ZSY98e83a/" target="_blank">
+                            <button class="blue-button">
+                                Check Example Schema Result
+                            </button>
+                        </a>
+                    </div>
+                    
+                    <div class="small-box" onclick="expandBox(this)">
+                    <div>/tiktok2?</div>
+                    <div class="text-code">parameter required</div>
+                    <div class="code-block">
+                        <pre><code>/tiktok2?url=</code></pre>
+                    </div>
+                    <div class="text-code">simple case code</div>
+                    <div class="code-block">
+                        <pre><code>case 'tiktok2': {
+  if (!text) return m.reply('masukkan url video tiktok!')
+  try {
+    let tiktok2 = await (await fetch(`https://shannmoderz-95f1d384b6d2.herokuapp.com/downloader/tiktok2?url=${text}`)).json()
+    let shannz = tiktok2.result.data
+    Shannz.sendMessage( m.chat, { video: { url: shannz.hdplay }, caption: `${shannz.title}` },{ quoted: m })
+  } catch (err) {
+      m.reply('masukkan query lainnya atau coba lagi nanti')
+    }
+}
+break</code></pre>
+                    </div>
+                        <a href="https://shannmoderz-95f1d384b6d2.herokuapp.com/downloader/tiktok2?url=https://vt.tiktok.com/ZSY98e83a/" target="_blank">
+                            <button class="blue-button">
+                                Check Example Schema Result
+                            </button>
+                        </a>
+                    </div>
+                    
+                    <div class="small-box" onclick="expandBox(this)">
+                    <div>/instagram?</div>
+                    <div class="text-code">parameter required</div>
+                    <div class="code-block">
+                        <pre><code>/instagram?url=</code></pre>
+                    </div>
+                    <div class="text-code">simple case code</div>
+                    <div class="code-block">
+                        <pre><code>case 'instagram': {
+  if (!text) return m.reply('masukkan url video instagram!')
+  try {
+    let insta = await (await fetch(`https://shannmoderz-95f1d384b6d2.herokuapp.com/downloader/instagram?url=${text}`)).json()
+    let shannz = insta.result.output
+    Shannz.sendMessage( m.chat, { video: { url: shannz.url[0].url }, caption: `${shannz.meta.title}` },{ quoted: m })
+  } catch (err) {
+      m.reply('masukkan query lainnya atau coba lagi nanti')
+    }
+}
+break</code></pre>
+                    </div>
+                        <a href="https://shannmoderz-95f1d384b6d2.herokuapp.com/downloader/instagram?url=https://www.instagram.com/reel/C6F57rGrV_x/?igsh=OXJxanVpdHdiczVi" target="_blank">
+                            <button class="blue-button">
+                                Check Example Schema Result
+                            </button>
+                        </a>
+                    </div>
+                    
+                    <div class="small-box" onclick="expandBox(this)">
+                    <div>/ttslide?</div>
+                    <div class="text-code">parameter required</div>
+                    <div class="code-block">
+                        <pre><code>/ttslide?url=</code></pre>
+                    </div>
+                    <div class="text-code">simple case code</div>
+                    <div class="code-block">
+                        <pre><code>case 'ttslide': {
+  if (!text) return m.reply('masukkan url silde tiktok!')
+  try {
+    let slide = await (await fetch(`https://shannmoderz-95f1d384b6d2.herokuapp.com/downloader/ttslide?url=${text}`)).json()
+    let shannz = slide.result.output
+    Shannz.sendMessage( m.chat, { video: { url: shannz.url[0].url }, caption: shannz.meta.title },{ quoted: m })
+  } catch (err) {
+      m.reply('masukkan query lainnya atau coba lagi nanti')
+    }
+}
+break</code></pre>
+                    </div>
+                        <a href="https://shannmoderz-95f1d384b6d2.herokuapp.com/downloader/slide?url=https://vt.tiktok.com/ZSY6HpUNk/" target="_blank">
+                            <button class="blue-button">
+                                Check Example Schema Result
+                            </button>
+                        </a>
+                    </div>
+                    
+                    <div class="small-box" onclick="expandBox(this)">
+                    <div>/capcut?</div>
+                    <div class="text-code">parameter required</div>
+                    <div class="code-block">
+                        <pre><code>/capcut?url=</code></pre>
+                    </div>
+                    <div class="text-code">simple case code</div>
+                    <div class="code-block">
+                        <pre><code>case 'capcut': {
+  if (!text) return m.reply('masukkan url capcut!')
+  try {
+    let capcut = await (await fetch(`https://shannmoderz-95f1d384b6d2.herokuapp.com/downloader/capcut?url=${text}`)).json()
+    let shannz = capcut.result
+    Shannz.sendMessage( m.chat, { video: { url: shannz.url }, caption: shannz.title },{ quoted: m })
+  } catch (err) {
+      m.reply('masukkan query lainnya atau coba lagi nanti')
+    }
+}
+break</code></pre>
+                    </div>
+                        <a href="https://shannmoderz-95f1d384b6d2.herokuapp.com/downloader/capcut?url=https://www.capcut.com/t/Zs8MPAKjG/" target="_blank">
+                            <button class="blue-button">
+                                Check Example Schema Result
+                            </button>
+                        </a>
+                    </div>
+                    
+                    <div class="small-box" onclick="expandBox(this)">
+                    <div>/aptoidedl?</div>
+                    <div class="text-code">parameter required</div>
+                    <div class="code-block">
+                        <pre><code>/aptoidedl?id=</code></pre>
+                    </div>
+                    <div class="text-code">simple case code</div>
+                    <div class="code-block">
+                        <pre><code>case 'aptoidedl': {
+  if (!text) return m.reply('masukkan id aplikasi!')
+  try {
+    let apto = await (await fetch(`https://shannmoderz-95f1d384b6d2.herokuapp.com/downloader/aptoidedl?id=${text}`)).json()
+    let shannz = apto.result
+    Shannz.sendMessage( m.chat, { document: { url: shannz.link }, fileName: `${shannz.appname}.apk`, mimetype: 'application/xapk' },{ quoted: m })
+  } catch (err) {
+      m.reply('masukkan query lainnya atau coba lagi nanti')
+    }
+}
+break</code></pre>
+                    </div>
+                        <a href="https://shannmoderz-95f1d384b6d2.herokuapp.com/downloader/aptoidedl?id=com.mobile.legends" target="_blank">
+                            <button class="blue-button">
+                                Check Example Schema Result
+                            </button>
+                        </a>
+                    </div>
+                 </div>
+             </div>
     </main>
 
     <nav>

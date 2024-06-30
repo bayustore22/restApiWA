@@ -228,6 +228,49 @@ footer {
             margin: 0;
             font-size: 0.7em;
         }
+        
+        form {
+            background-color: transparent;
+            padding: 0;
+            border-radius: 4px;
+            margin: 20px 0;
+            color: #fff;
+         }
+
+        form label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        form input[type="text"],
+        form textarea,
+        form select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            color: #333;
+        }
+
+        form button {
+            background-color: #1e90ff; /* biru tua */
+    color: #fff;
+    padding: 5px 5px;
+    margin: 0 auto;
+    position: center;
+    font-size: 13px;
+    transition: background-color 0.3s ease;
+        }
+
+        form button:hover {
+            background-color: #1a3d5f;
+        }
+        
+        .post-data {
+            display: none;
+        }
 
 .colum-container {
     display: flex;

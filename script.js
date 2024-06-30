@@ -11,6 +11,72 @@
         }
     }
     fetchStats();
+    
+        function expandBox(box) {
+  const isExpanded = box.classList.contains('expanded');
+  const allBoxes = document.querySelectorAll('.small-box');
+
+  if (!isExpanded) {
+    box.classList.add('expanded');
+    formatJson();
+    box.querySelector('.button-container').style.display = 'block'; // Show the button container
+  }
+}
+    
+    document.addEventListener('click', (e) => {
+  const expandedBox = document.querySelector('.small-box.expanded');
+  if (expandedBox && e.target !== expandedBox && !expandedBox.contains(e.target)) {
+    expandedBox.classList.remove('expanded');
+  }
+});
+    
+function togglePostData() {
+            const method = document.getElementById('method').value;
+            const postDataContainer = document.getElementById('postDataContainer');
+            if (method === 'POST') {
+                postDataContainer.style.display = 'block';
+            } else {
+                postDataContainer.style.display = 'none';
+            }
+        }
+
+        async function testApi() {
+            const method = document.getElementById('method').value;
+            const endpoint = document.getElementById('endpoint').value;
+            const postData = document.getElementById('postData').value;
+
+            if (!endpoint) {
+                document.getElementById('result').textContent = 'Please enter a valid endpoint.';
+                return;
+            }
+
+            let options = {
+                method: method,
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            };
+
+            if (method === 'POST') {
+                try {
+                    options.body = JSON.stringify(JSON.parse(postData));
+                } catch (error) {
+                    document.getElementById('result').textContent = 'Invalid JSON in POST data.';
+                    return;
+                }
+            }
+
+            try {
+                const response = await fetch(endpoint, options);
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                const data = await response.json();
+                document.getElementById('result').textContent = JSON.stringify(data, null, 2);
+            } catch (error) {
+                document.getElementById('result').textContent = 'Error: ' + error.message;
+            }
+        }
 
 // Fungsi untuk menutup popup pertama dan menampilkan popup kedua
         function closePopup1() {
@@ -86,36 +152,3 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         setInterval(updateClock, 1000);
-
-        function expandBox(box) {
-  const isExpanded = box.classList.contains('expanded');
-  const allBoxes = document.querySelectorAll('.small-box');
-
-  if (!isExpanded) {
-    box.classList.add('expanded');
-    formatJson();
-    box.querySelector('.button-container').style.display = 'block'; // Show the button container
-  }
-}
-    
-    document.addEventListener('click', (e) => {
-  const expandedBox = document.querySelector('.small-box.expanded');
-  if (expandedBox && e.target !== expandedBox && !expandedBox.contains(e.target)) {
-    expandedBox.classList.remove('expanded');
-  }
-});``````````
-
-function copyToClipboard(linkBox) {
-  const textArea = document.createElement('textarea');
-  textArea.value = linkBox.textContent;
-  document.body.appendChild(textArea);
-  textArea.select();
-  document.execCommand('copy');
-  document.body.removeChild(textArea);
-
-  const popup = document.getElementById('popup');
-  popup.classList.add('show');
-  setTimeout(() => {
-    popup.classList.remove('show');
-  }, 2000);
-}
