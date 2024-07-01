@@ -141,65 +141,74 @@ nav.slide {
 
 /* CSS untuk kotak besar dan kotak kecil */
 .box-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px; /* Jarak antara jam dan kotak besar */
-}
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px; /* Jarak antara jam dan kotak besar */
+        }
 
-.big-box {
-  display: flex;
-  flex-direction: column; /* Mengatur kotak kecil secara vertikal */
-  justify-content: space-around;
-  align-items: center;
-  width: 80%;
-  padding: 20px;
-  border: 3px solid #fff; /* Bingkai putih */
-  border-radius: 15px; /* Sudut bingkai melengkung */
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); /* Bayangan putih */
-  background: linear-gradient(45deg, #333, #555); /* Latar belakang gradasi */
-}
+        .big-box {
+            display: flex;
+            flex-direction: column; /* Mengatur kotak kecil secara vertikal */
+            justify-content: space-around;
+            align-items: center;
+            width: 80%;
+            padding: 20px;
+            border: 3px solid #fff; /* Bingkai putih */
+            border-radius: 15px; /* Sudut bingkai melengkung */
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); /* Bayangan putih */
+            background: linear-gradient(45deg, #333, #555); /* Latar belakang gradasi */
+            transition: height 0.3s, padding 0.3s; /* Efek transisi untuk tinggi dan padding */
+        }
 
-.small-box {
-    width: 105%; /* Lebar kotak kecil */
-    padding: 10px; /* Mengurangi padding untuk memperkecil tinggi kotak */
-    margin: 10px 0; /* Jarak antar kotak kecil */
-    border: 2px solid #fff; /* Bingkai putih */
-    border-radius: 10px; /* Sudut bingkai melengkung */
-    text-align: center;
-    color: #fff; /* Warna teks putih */
-    background: linear-gradient(45deg, #444, #666); /* Latar belakang gradasi */
-    transition: height 0.3s, padding 0.3s; /* Efek transisi hanya pada tinggi dan padding */
-    cursor: pointer; /* Menunjukkan bahwa kotak dapat diklik */
-    position: relative; /* Untuk menempatkan teks tambahan di dalam kotak */
-    box-sizing: border-box; /* Memastikan padding dan border termasuk dalam ukuran kotak */
-    height: 50px; /* Tinggi kotak kecil */
-    overflow-y: auto; /* Menambahkan scroll vertikal jika konten terlalu panjang */
-}
+        .big-box.minimized {
+            height: 50px; /* Tinggi saat diminimalkan */
+            overflow: hidden; /* Sembunyikan konten yang tidak terlihat */
+            padding: 10px; /* Padding saat diminimalkan */
+        }
 
-.small-box.expanded {
-    height: 300px; /* Tinggi kotak saat membesar */
-    padding: 20px; /* Padding saat kotak membesar */
-    background: linear-gradient(45deg, #444, #666); /* Tetap menggunakan latar belakang yang sama */
-}
+        .small-box {
+            width: 105%; /* Lebar kotak kecil */
+            padding: 10px; /* Mengurangi padding untuk memperkecil tinggi kotak */
+            margin: 10px 0; /* Jarak antar kotak kecil */
+            border: 2px solid #fff; /* Bingkai putih */
+            border-radius: 10px; /* Sudut bingkai melengkung */
+            text-align: center;
+            color: #fff; /* Warna teks putih */
+            background: linear-gradient(45deg, #444, #666); /* Latar belakang gradasi */
+            transition: height 0.3s, padding 0.3s; /* Efek transisi hanya pada tinggi dan padding */
+            cursor: pointer; /* Menunjukkan bahwa kotak dapat diklik */
+            position: relative; /* Untuk menempatkan teks tambahan di dalam kotak */
+            box-sizing: border-box; /* Memastikan padding dan border termasuk dalam ukuran kotak */
+            height: 50px; /* Tinggi kotak kecil */
+            overflow-y: auto; /* Menambahkan scroll vertikal jika konten terlalu panjang */
+        }
 
-.small-box:hover {
-    transform: scale(1.05);
-    background: linear-gradient(45deg, #444, #666); /* Tetap menggunakan latar belakang yang sama */
-}
+        .small-box.expanded {
+            height: 300px; /* Tinggi kotak saat membesar */
+            padding: 20px; /* Padding saat kotak membesar */
+            background: linear-gradient(45deg, #444, #666); /* Tetap menggunakan latar belakang yang sama */
+        }
 
-.small-box.expanded .additional-text {
-    display: flex; /* Tampilkan teks tambahan saat kotak membesar */
-    justify-content: space-between; /* Mengatur posisi link dan tombol copy */
-    align-items: center;
-}
+        .small-box:hover {
+            transform: scale(1.05);
+            background: linear-gradient(45deg, #444, #666); /* Tetap menggunakan latar belakang yang sama */
+        }
 
-.title {
-    font-size: 24px;
-    font-weight: bold;
-    color: #fff;
-    margin-bottom: 20px; /* Jarak antara judul dan kotak besar */
-}
+        .small-box.expanded .additional-text {
+            display: flex; /* Tampilkan teks tambahan saat kotak membesar */
+            justify-content: space-between; /* Mengatur posisi link dan tombol copy */
+            align-items: center;
+        }
+
+        .title {
+            font-size: 20px;
+            font-weight: bold;
+            color: #fff;
+            margin-bottom: 20px; /* Jarak antara judul dan kotak besar */
+            display: flex;
+            align-items: center;
+        }
 
 /* CSS untuk memastikan footer berada di bawah */
 body {
@@ -343,7 +352,6 @@ footer {
     visibility: visible;
     opacity: 1;
 }
-
 .code-block {
     background: #1e1e1e;
     padding: 10px;
@@ -367,38 +375,65 @@ footer {
 }
 
 .text-code {
-    font-size: 12px;
-    color: #fff;
-    padding: 5px;
-    background-color: #1e1e1e;
-    border-left: 5px solid #fff;
-    border-radius: 5px;
-    display: none; /* Sembunyikan elemen secara default */
+            font-size: 12px;
+            color: #fff;
+            padding: 5px;
+            background-color: #1e1e1e;
+            border-left: 5px solid #fff;
+            border-radius: 5px;
+            display: none; /* Sembunyikan elemen secara default */
+        }
+
+        .small-box.expanded .text-code {
+            display: block; /* Tampilkan elemen saat kotak diperbesar */
+            margin-top: 10px; /* Jarak antara teks code dan kotak code-block */
+        }
+
+        .blue-button {
+            background-color: #1e90ff; /* biru tua */
+            color: #fff;
+            padding: 5px 5px;
+            margin: 0 auto;
+            position: center;
+            font-size: 13px;
+            transition: background-color 0.3s ease;
+            display: none;
+        }
+
+        .blue-button:hover {
+            background-color: #1a3d5f; /* biru tua sedikit lebih gelap */
+        }
+
+        .small-box.expanded .blue-button {
+            display: block; /* Tampilkan elemen saat kotak diperbesar */
+            margin-top: 10px; /* Jarak antara teks code dan kotak code-block */
+        }
+
+        .toggle-button {
+            cursor: pointer;
+            font-size: 18px;
+            margin-left: 10px;
+            color: #fff;
+        }
+        
+        .big-box.minimized .small-box {
+    display: none; /* Sembunyikan semua small-box saat big-box diminimalkan */
 }
 
-.small-box.expanded .text-code {
-    display: block; /* Tampilkan elemen saat kotak diperbesar */
-    margin-top: 10px; /* Jarak antara teks code dan kotak code-block */
+.big-box.minimized .title {
+    display: flex; /* Pastikan judul tetap terlihat */
+    justify-content: left; /* Pusatkan judul */
+    align-items: center; /* Pusatkan secara vertikal */
+    padding-top: 15px;
+    padding-left: 10px;
+    width: 100%; /* Lebar penuh */
+    font-size: 15px;
+    position: relative; /* Untuk menempatkan tombol di kanan */
 }
 
-.blue-button {
-    background-color: #1e90ff; /* biru tua */
-    color: #fff;
-    padding: 5px 5px;
-    margin: 0 auto;
-    position: center;
-    font-size: 13px;
-    transition: background-color 0.3s ease;
-    display: none;
-  }
-
- .blue-button:hover {
-    background-color: #1a3d5f; /* biru tua sedikit lebih gelap */
-  }
-  
- .small-box.expanded .blue-button {
-    display: block; /* Tampilkan elemen saat kotak diperbesar */
-    margin-top: 10px; /* Jarak antara teks code dan kotak code-block */
+.big-box.minimized .toggle-button {
+    position: absolute; /* Posisi absolut untuk tombol Jarak dari kanan */
+    left: 210px;
 }
   
   .stats-container {

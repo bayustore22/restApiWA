@@ -29,6 +29,30 @@
     expandedBox.classList.remove('expanded');
   }
 });
+
+document.addEventListener('DOMContentLoaded', (event) => {
+    const bigBox = document.querySelector('.big-box');
+    const toggleButton = bigBox.querySelector('.toggle-button');
+    
+    if (bigBox.classList.contains('minimized')) {
+        toggleButton.innerHTML = '&#x25BC;'; // Simbol untuk keadaan diminimalkan
+    } else {
+        toggleButton.innerHTML = '&#x25B2;'; // Simbol untuk keadaan diperbesar
+    }
+});
+
+function toggleBigBox(button) {
+    const bigBox = button.closest('.big-box');
+    const isMinimized = bigBox.classList.contains('minimized');
+
+    if (isMinimized) {
+        bigBox.classList.remove('minimized');
+        button.innerHTML = '&#x25B2;'; // Ubah simbol ke (v) terbalik
+    } else {
+        bigBox.classList.add('minimized');
+        button.innerHTML = '&#x25BC;'; // Ubah simbol ke (v)
+    }
+}
     
 function togglePostData() {
             const method = document.getElementById('method').value;
