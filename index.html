@@ -37,10 +37,10 @@
             <img src="https://telegra.ph/file/3a9af659b6258be78c3a3.jpg" alt="Popup Image">
             <h2>NEW FEATURES!!</h2>
             <ul>
-                <li>Add Fitur Api Checker</li>
-                <li>Add Endpoint Downloader</li>
-                <li>Add 3 Endpoint Search</li>
-                <li>Add 6 Endpoint Downloader</li>
+                <li>Add Fitur ChatBot</li>
+                <li>Add Endpoint Tools</li>
+                <li>Add 1 Endpoint Search</li>
+                <li>Add 4 Endpoint Tools</li>
             </ul>
             <button class="close-btn" onclick="closePopup2()">Close</button>
         </div>
@@ -812,7 +812,6 @@ break</code></pre>
     let tts = await (await fetch(`https://shannmoderz-95f1d384b6d2.herokuapp.com/search/tiktok?query=${text}`)).json()
     let shannz = tts.result
     Shannz.sendMessage(m.chat, { video: { url: shannz.no_watermark }, caption: shannz.title },{ quoted: m })
-    m.reply(shannz)
   } catch (err) {
       m.reply('masukkan query lainnya atau coba lagi nanti')
     }
@@ -820,6 +819,33 @@ break</code></pre>
 break</code></pre>
                     </div>
                         <a href="https://shannmoderz-95f1d384b6d2.herokuapp.com/search/tiktok?query=christy+jkt48" target="_blank">
+                            <button class="blue-button">
+                                Check Example Schema Result
+                            </button>
+                        </a>
+                    </div>
+                    
+                    <div class="small-box" onclick="expandBox(this)">
+                    <div>/pinterest?</div>
+                    <div class="text-code">parameter required</div>
+                    <div class="code-block">
+                        <pre><code>/pinterest?query=</code></pre>
+                    </div>
+                    <div class="text-code">simple case code</div>
+                    <div class="code-block">
+                        <pre><code>case 'pinterest': {
+  if (!text) return m.reply('masukkan subjek gambar!')
+  try {
+    let pin = await (await fetch(`https://shannmoderz-95f1d384b6d2.herokuapp.com/search/pinterest?query=${text}`)).json()
+    let shannz = pin.result[0]
+    Shannz.sendMessage(m.chat, { image: { url: shannz }, caption: text },{ quoted: m })
+  } catch (err) {
+      m.reply('masukkan query lainnya atau coba lagi nanti')
+    }
+}
+break</code></pre>
+                    </div>
+                        <a href="https://shannmoderz-95f1d384b6d2.herokuapp.com/search/pinterest?query=christy+jkt48" target="_blank">
                             <button class="blue-button">
                                 Check Example Schema Result
                             </button>
@@ -1383,6 +1409,122 @@ break</code></pre>
                     </div>
                  </div>
              </div>
+             
+             <div class="box-container">
+    <div class="big-box minimized">
+        <div class="title">
+            /tools
+            <span class="toggle-button" onclick="toggleBigBox(this)">&#x25BC;</span> <!-- Tombol minimisasi/maksimalisasi -->
+        </div>
+                <div class="small-box" onclick="expandBox(this)">
+                    <div>/sswebphone?</div>
+                    <div class="text-code">parameter required</div>
+                    <div class="code-block">
+                        <pre><code>/sswebphone?url=</code></pre>
+                    </div>
+                    <div class="text-code">simple case code</div>
+                    <div class="code-block">
+                        <pre><code>case 'sswebphone': {
+  if (!text) return m.reply('masukkan url!')
+  try {
+    let ssphone = await (await fetch(`https://shannmoderz-95f1d384b6d2.herokuapp.com/tools/sswebphone?url=${text}`)).json()
+    let shannz = ssphone.result
+    Shannz.sendMessage( m.chat, { image: { url: shannz }, caption: `Powered By Shannz Rest APIs` },{ quoted: m })
+  } catch (err) {
+      m.reply('masukkan url lainnya atau coba lagi nanti')
+    }
+}
+break</code></pre>
+                    </div>
+                        <a href="https://shannmoderz-95f1d384b6d2.herokuapp.com/tools/sswebphone?url=https://github.com/" target="_blank">
+                            <button class="blue-button">
+                                Check Example Schema Result
+                            </button>
+                        </a>
+                    </div>
+                    
+                    <div class="small-box" onclick="expandBox(this)">
+                    <div>/sswebtab?</div>
+                    <div class="text-code">parameter required</div>
+                    <div class="code-block">
+                        <pre><code>/sswebtab?url=</code></pre>
+                    </div>
+                    <div class="text-code">simple case code</div>
+                    <div class="code-block">
+                        <pre><code>case 'sswebtab': {
+  if (!text) return m.reply('masukkan url!')
+  try {
+    let sstab = await (await fetch(`https://shannmoderz-95f1d384b6d2.herokuapp.com/tools/sswebtab?url=${text}`)).json()
+    let shannz = sstab.result
+    Shannz.sendMessage( m.chat, { image: { url: shannz }, caption: `Powered By Shannz Rest APIs` },{ quoted: m })
+  } catch (err) {
+      m.reply('masukkan url lainnya atau coba lagi nanti')
+    }
+}
+break</code></pre>
+                    </div>
+                        <a href="https://shannmoderz-95f1d384b6d2.herokuapp.com/tools/sswebtab?url=https://github.com/" target="_blank">
+                            <button class="blue-button">
+                                Check Example Schema Result
+                            </button>
+                        </a>
+                    </div>
+                    
+                    <div class="small-box" onclick="expandBox(this)">
+                    <div>/sswebdesktop?</div>
+                    <div class="text-code">parameter required</div>
+                    <div class="code-block">
+                        <pre><code>/sswebdesktop?url=</code></pre>
+                    </div>
+                    <div class="text-code">simple case code</div>
+                    <div class="code-block">
+                        <pre><code>case 'sswebdesktop': {
+  if (!text) return m.reply('masukkan url!')
+  try {
+    let ssdesktop = await (await fetch(`https://shannmoderz-95f1d384b6d2.herokuapp.com/tools/sswebdesktop?url=${text}`)).json()
+    let shannz = ssdesktop.result
+    Shannz.sendMessage( m.chat, { image: { url: shannz }, caption: `Powered By Shannz Rest APIs` },{ quoted: m })
+  } catch (err) {
+      m.reply('masukkan query lainnya atau coba lagi nanti')
+    }
+}
+break</code></pre>
+                    </div>
+                        <a href="https://shannmoderz-95f1d384b6d2.herokuapp.com/tools/sswebdesktop?url=https://github.com/" target="_blank">
+                            <button class="blue-button">
+                                Check Example Schema Result
+                            </button>
+                        </a>
+                    </div>
+                    
+                    <div class="small-box" onclick="expandBox(this)">
+                    <div>/encrypt?</div>
+                    <div class="text-code">parameter required</div>
+                    <div class="code-block">
+                        <pre><code>/encrypt?query=</code></pre>
+                    </div>
+                    <div class="text-code">simple case code</div>
+                    <div class="code-block">
+                        <pre><code>case 'encrypt': {
+  if (!text) return m.reply('masukkan code!')
+  try {
+    let encrypted = await (await fetch(`https://shannmoderz-95f1d384b6d2.herokuapp.com/tools/encrypt?query=${text}`)).json()
+    let shannz = ssphone.result.data
+    m.reply(shannz);
+  } catch (err) {
+      m.reply('masukkan code lainnya atau coba lagi nanti')
+    }
+}
+break</code></pre>
+                    </div>
+                        <a href="https://shannmoderz-95f1d384b6d2.herokuapp.com/tools/encrypt?query=const+axios+=+require('axios');" target="_blank">
+                            <button class="blue-button">
+                                Check Example Schema Result
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
     </main>
 
     <nav>
